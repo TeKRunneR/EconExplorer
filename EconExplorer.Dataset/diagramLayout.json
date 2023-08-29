@@ -7,7 +7,47 @@
         "x": 0,
         "y": 0
       },
-      "nodes": [],
+      "nodes": [
+        {
+          "location": {
+            "x": 0,
+            "y": 64
+          },
+          "nodeIndex": "CL_PRIX_CONSO",
+          "nodeLineageTag": "e2b81847-05d9-43d4-8525-c6dc432c4731",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 387,
+            "y": 0
+          },
+          "nodeIndex": "IPC-2015",
+          "nodeLineageTag": "fdf74ccb-fb94-47f7-ab4c-f8faf1fe197c",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 794,
+            "y": 48
+          },
+          "nodeIndex": "Date",
+          "nodeLineageTag": "ef99bbc1-9cdc-4d66-b9b8-7d0d59881ad0",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 3
+        }
+      ],
       "name": "Toutes les tables",
       "zoomValue": 100,
       "pinKeyFieldsToTop": false,
