@@ -12,7 +12,7 @@
       },
       {
         "name": "PBI_QueryOrder",
-        "value": "[\"IPC-2015\",\"CL_PRIX_CONSO\"]"
+        "value": "[\"IPC-2015\",\"CL_PRIX_CONSO\",\"CNA-2014-RDB\",\"TCRED-EMPLOI-31-DECEMBRE-BASE-2018\",\"CL_ZONE_GEO\",\"CL_NAF2_RGP\",\"EMPLOI-BIT-TRIM\",\"TAUX-CHOMAGE\",\"CL_INDICATEUR\",\"CL_SEXE\",\"SI_DST_05TH_20\",\"SI_DST_04TH_20\",\"SI_DST_03RD_20\",\"SI_DST_02ND_20\",\"SI_DST_FRST_20\",\"Income shares\",\"SI_POV_GINI\"]"
       },
       {
         "name": "__PBI_TimeIntelligenceEnabled",
@@ -38,6 +38,35 @@
       "returnErrorValuesAsNull": true
     },
     "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "queryGroups": [
+      {
+        "annotations": [
+          {
+            "name": "PBI_QueryGroupOrder",
+            "value": "0"
+          }
+        ],
+        "folder": "Séries INSEE"
+      },
+      {
+        "annotations": [
+          {
+            "name": "PBI_QueryGroupOrder",
+            "value": "1"
+          }
+        ],
+        "folder": "Code lists INSEE"
+      },
+      {
+        "annotations": [
+          {
+            "name": "PBI_QueryGroupOrder",
+            "value": "2"
+          }
+        ],
+        "folder": "Series WB"
+      }
+    ],
     "relationships": [
       {
         "name": "2f4e8139-971f-4e17-8517-b05a626433a0",
@@ -60,6 +89,112 @@
         "fromTable": "IPC-2015",
         "toColumn": "Level 3 code",
         "toTable": "CL_PRIX_CONSO"
+      },
+      {
+        "name": "0f8ba00b-4e2a-4541-ae1d-dcf260347012",
+        "fromColumn": "NAF2_RGP",
+        "fromTable": "TCRED-EMPLOI-31-DECEMBRE-BASE-2018",
+        "toColumn": "ID",
+        "toTable": "CL_NAF2_RGP"
+      },
+      {
+        "name": "a12ce91d-171b-48f0-a56b-c698879eefa5",
+        "fromColumn": "REF_AREA",
+        "fromTable": "TCRED-EMPLOI-31-DECEMBRE-BASE-2018",
+        "toColumn": "ID",
+        "toTable": "CL_ZONE_GEO"
+      },
+      {
+        "name": "f3dafcfe-d1f6-46c0-b30a-33a90619425f",
+        "fromColumn": "REF_AREA",
+        "fromTable": "TAUX-CHOMAGE",
+        "toColumn": "ID",
+        "toTable": "CL_ZONE_GEO"
+      },
+      {
+        "name": "9e636f6a-4cd9-40bb-8905-d87cf4a5a160",
+        "fromColumn": "TIME_PERIOD",
+        "fromTable": "TCRED-EMPLOI-31-DECEMBRE-BASE-2018",
+        "toColumn": "Date",
+        "toTable": "Date"
+      },
+      {
+        "name": "d92f4c19-dee8-47bf-b739-726a42bacfc9",
+        "fromColumn": "TIME_PERIOD",
+        "fromTable": "TAUX-CHOMAGE",
+        "toColumn": "Date",
+        "toTable": "Date"
+      },
+      {
+        "name": "7ba6105f-29b6-4e39-9dfc-63cbfee6f636",
+        "fromColumn": "TIME_PERIOD",
+        "fromTable": "EMPLOI-BIT-TRIM",
+        "toColumn": "Date",
+        "toTable": "Date"
+      },
+      {
+        "name": "3aa0819f-a160-4b70-80d2-2ee9dcc7d98b",
+        "fromColumn": "SEXE",
+        "fromTable": "EMPLOI-BIT-TRIM",
+        "toColumn": "ID",
+        "toTable": "CL_SEXE"
+      },
+      {
+        "name": "443b96dc-0eb9-471d-b469-1b5929a13a12",
+        "crossFilteringBehavior": "bothDirections",
+        "fromCardinality": "one",
+        "fromColumn": "YEAR",
+        "fromTable": "SI_DST_04TH_20",
+        "toColumn": "YEAR",
+        "toTable": "SI_DST_05TH_20"
+      },
+      {
+        "name": "57456eb5-2f40-47e6-980c-c28575d66e7c",
+        "crossFilteringBehavior": "bothDirections",
+        "fromCardinality": "one",
+        "fromColumn": "YEAR",
+        "fromTable": "SI_DST_03RD_20",
+        "toColumn": "YEAR",
+        "toTable": "SI_DST_05TH_20"
+      },
+      {
+        "name": "6b167ff3-2198-4127-84b8-eea466d89a04",
+        "crossFilteringBehavior": "bothDirections",
+        "fromCardinality": "one",
+        "fromColumn": "YEAR",
+        "fromTable": "SI_DST_02ND_20",
+        "toColumn": "YEAR",
+        "toTable": "SI_DST_05TH_20"
+      },
+      {
+        "name": "5eb123ae-28fb-4cd2-a9c9-dc96312d23af",
+        "crossFilteringBehavior": "bothDirections",
+        "fromCardinality": "one",
+        "fromColumn": "YEAR",
+        "fromTable": "SI_DST_FRST_20",
+        "toColumn": "YEAR",
+        "toTable": "SI_DST_05TH_20"
+      },
+      {
+        "name": "d76353d5-c519-42f4-b18f-e063ef5816e6",
+        "fromColumn": "YEAR",
+        "fromTable": "Income shares",
+        "toColumn": "Date",
+        "toTable": "Date"
+      },
+      {
+        "name": "41f39cbb-b195-4bed-b34d-ceccf803dce9",
+        "fromColumn": "TIME_PERIOD",
+        "fromTable": "CNA-2014-RDB",
+        "toColumn": "Date",
+        "toTable": "Date"
+      },
+      {
+        "name": "b6e1cf29-3793-4217-8e29-547979115411",
+        "fromColumn": "YEAR",
+        "fromTable": "SI_POV_GINI",
+        "toColumn": "Date",
+        "toTable": "Date"
       }
     ],
     "sourceQueryCulture": "fr-FR",
@@ -68,12 +203,12 @@
         "name": "IPC-2015",
         "annotations": [
           {
-            "name": "PBI_NavigationStepName",
-            "value": "Navigation"
-          },
-          {
             "name": "PBI_ResultType",
             "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
           }
         ],
         "columns": [
@@ -312,6 +447,7 @@
           {
             "name": "IPC-2015",
             "mode": "import",
+            "queryGroup": "Séries INSEE",
             "source": {
               "expression": [
                 "let",
@@ -574,10 +710,6 @@
         "name": "CL_PRIX_CONSO",
         "annotations": [
           {
-            "name": "PBI_NavigationStepName",
-            "value": "Navigation"
-          },
-          {
             "name": "PBI_ResultType",
             "value": "Table"
           }
@@ -719,6 +851,7 @@
           {
             "name": "CL_PRIX_CONSO",
             "mode": "import",
+            "queryGroup": "Code lists INSEE",
             "source": {
               "expression": [
                 "let",
@@ -1143,6 +1276,1857 @@
           }
         ],
         "showAsVariationsOnly": true
+      },
+      {
+        "name": "CNA-2014-RDB",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "TIME_PERIOD",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "70ac765b-ae83-40c1-83b0-4eeaed0f000e",
+            "sourceColumn": "TIME_PERIOD",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CNA_EVOPAARPP",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "ed959c40-d696-43cc-859d-ab8c6869a5f9",
+            "sourceColumn": "CNA_EVOPAARPP",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "CNA_EVOPAPP",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "1fea56b3-df48-4f65-a769-09e86b20bf46",
+            "sourceColumn": "CNA_EVOPAPP",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Index EVOPAARPP",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "7fa2244b-d77f-43ab-83f6-bb7f1c85fee0",
+            "sourceColumn": "Index EVOPAARPP",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Index EVOPAPP",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "42b341c1-96e2-4ab5-94b7-0050762b1bc8",
+            "sourceColumn": "Index EVOPAPP",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "295199ec-6959-4862-9b43-4ae87a625a53",
+        "partitions": [
+          {
+            "name": "CNA-2014-RDB",
+            "mode": "import",
+            "queryGroup": "Séries INSEE",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Xml.Tables(Web.Contents(\"https://bdm.insee.fr/series/sdmx/data/CNA-2014-RDB/A..TAUX.FE.POURCENT.BRUT\")),",
+                "    Table1 = Source{1}[Table],",
+                "    Table0 = Table1{0}[Table],",
+                "    Table2 = Table0{0}[Table],",
+                "    #\"Type modifié\" = Table.TransformColumnTypes(Table2,{{\"Attribute:NATURE\", type text}, {\"Attribute:REF_AREA\", type text}, {\"Attribute:CORRECTION\", type text}, {\"Attribute:FREQ\", type text}, {\"Attribute:UNIT_MEASURE\", type text}, {\"Attribute:INDICATEUR\", type text}, {\"Attribute:UNIT_MULT\", Int64.Type}, {\"Attribute:IDBANK\", Int64.Type}, {\"Attribute:TITLE_FR\", type text}, {\"Attribute:TITLE_EN\", type text}, {\"Attribute:LAST_UPDATE\", type date}, {\"Attribute:DECIMALS\", Int64.Type}}),",
+                "    #\"Lignes filtrées\" = Table.SelectRows(#\"Type modifié\", each ([#\"Attribute:INDICATEUR\"] = \"CNA_EVOPAARPP\" or [#\"Attribute:INDICATEUR\"] = \"CNA_EVOPAPP\")),",
+                "    #\"Colonnes supprimées\" = Table.RemoveColumns(#\"Lignes filtrées\",{\"Attribute:NATURE\", \"Attribute:UNIT_MEASURE\", \"Attribute:UNIT_MULT\", \"Attribute:TITLE_FR\", \"Attribute:TITLE_EN\", \"Attribute:DECIMALS\"}),",
+                "    #\"Obs développé\" = Table.ExpandTableColumn(#\"Colonnes supprimées\", \"Obs\", {\"Attribute:TIME_PERIOD\", \"Attribute:OBS_VALUE\", \"Attribute:OBS_STATUS\", \"Attribute:OBS_QUAL\", \"Attribute:OBS_TYPE\", \"Attribute:OBS_REV\"}, {\"Obs.Attribute:TIME_PERIOD\", \"Obs.Attribute:OBS_VALUE\", \"Obs.Attribute:OBS_STATUS\", \"Obs.Attribute:OBS_QUAL\", \"Obs.Attribute:OBS_TYPE\", \"Obs.Attribute:OBS_REV\"}),",
+                "    #\"Colonnes renommées\" = Table.RenameColumns(#\"Obs développé\",{{\"Obs.Attribute:TIME_PERIOD\", \"TIME_PERIOD\"}, {\"Obs.Attribute:OBS_VALUE\", \"OBS_VALUE\"}, {\"Obs.Attribute:OBS_STATUS\", \"OBS_STATUS\"}, {\"Obs.Attribute:OBS_QUAL\", \"OBS_QUAL\"}, {\"Obs.Attribute:OBS_TYPE\", \"OBS_TYPE\"}, {\"Obs.Attribute:OBS_REV\", \"OBS_REV\"}, {\"Attribute:REF_AREA\", \"REF_AREA\"}, {\"Attribute:CORRECTION\", \"CORRECTION\"}, {\"Attribute:FREQ\", \"FREQ\"}, {\"Attribute:INDICATEUR\", \"INDICATEUR\"}, {\"Attribute:IDBANK\", \"IDBANK\"}, {\"Attribute:LAST_UPDATE\", \"LAST_UPDATE\"}}),",
+                "    #\"Colonnes permutées\" = Table.ReorderColumns(#\"Colonnes renommées\",{\"INDICATEUR\", \"TIME_PERIOD\", \"OBS_VALUE\", \"OBS_STATUS\", \"OBS_QUAL\", \"OBS_TYPE\", \"OBS_REV\", \"REF_AREA\", \"CORRECTION\", \"FREQ\", \"IDBANK\", \"LAST_UPDATE\"}),",
+                "    #\"Valeur remplacée\" = Table.ReplaceValue(#\"Colonnes permutées\",\".\",\",\",Replacer.ReplaceText,{\"OBS_VALUE\"}),",
+                "    #\"Type modifié1\" = Table.TransformColumnTypes(#\"Valeur remplacée\",{{\"OBS_VALUE\", type number}, {\"TIME_PERIOD\", type date}}),",
+                "    #\"Lignes triées\" = Table.Sort(#\"Type modifié1\",{{\"TIME_PERIOD\", Order.Ascending}}),",
+                "    #\"Lignes filtrées1\" = Table.SelectRows(#\"Lignes triées\", each ([TIME_PERIOD] <> #date(1959, 1, 1))),",
+                "    #\"Colonnes supprimées1\" = Table.RemoveColumns(#\"Lignes filtrées1\",{\"OBS_TYPE\", \"OBS_REV\", \"LAST_UPDATE\", \"OBS_STATUS\", \"OBS_QUAL\", \"CORRECTION\", \"FREQ\", \"IDBANK\", \"REF_AREA\"}),",
+                "    #\"Colonne dynamique\" = Table.Pivot(#\"Colonnes supprimées1\", List.Distinct(#\"Colonnes supprimées1\"[INDICATEUR]), \"INDICATEUR\", \"OBS_VALUE\"),",
+                "    #\"Index ajouté\" = Table.AddIndexColumn(#\"Colonne dynamique\", \"Index\", 1, 1, Int64.Type),",
+                "    #\"Lignes triées1\" = Table.Sort(#\"Index ajouté\",{{\"Index\", Order.Ascending}}),",
+                "    #\"Personnalisée ajoutée1\" = Table.AddColumn(#\"Lignes triées1\", \"PPI\", each if Date.Year([TIME_PERIOD]) = 2014 then 100 else null),",
+                "    BufferedStart = Table.Buffer( Table.Sort(#\"Personnalisée ajoutée1\",{{\"Index\", Order.Ascending}}) ),",
+                "    Initial = BufferedStart{54},",
+                "    FuckMe = List.Generate( ()=>",
+                "        [Result = Initial[PPI], Counter = 54],",
+                "        each [Counter] < Table.RowCount(BufferedStart),",
+                "        each [",
+                "            Counter = [Counter] + 1,",
+                "            Result = [Result] * (1 + BufferedStart[CNA_EVOPAARPP]{Counter}/100)",
+                "        ],",
+                "        each [Result]",
+                "    ),",
+                "    FuckMeAssUp = List.Generate( ()=>",
+                "        [Result = Initial[PPI], Counter = 54],",
+                "        each [Counter] > -1,",
+                "        each [",
+                "            Result = [Result] / (1 + BufferedStart[CNA_EVOPAARPP]{Counter+1}/100),",
+                "            Counter = [Counter] - 1",
+                "        ],",
+                "        each [Result]",
+                "    ),",
+                "    FuckMeAssDown = List.Reverse(FuckMeAssUp),",
+                "    FuckMeLess = List.RemoveFirstN(FuckMe),",
+                "    FuckMeUpAndDown = List.Combine({FuckMeAssDown, FuckMeLess}),",
+                "    FuckMeAPP = List.Generate( ()=>",
+                "        [Result = Initial[PPI], Counter = 54],",
+                "        each [Counter] < Table.RowCount(BufferedStart),",
+                "        each [",
+                "            Counter = [Counter] + 1,",
+                "            Result = [Result] * (1 + BufferedStart[CNA_EVOPAPP]{Counter}/100)",
+                "        ],",
+                "        each [Result]",
+                "    ),",
+                "    FuckMeAssUpAPP = List.Generate( ()=>",
+                "        [Result = Initial[PPI], Counter = 54],",
+                "        each [Counter] > -1,",
+                "        each [",
+                "            Result = [Result] / (1 + BufferedStart[CNA_EVOPAPP]{Counter+1}/100),",
+                "            Counter = [Counter] - 1",
+                "        ],",
+                "        each [Result]",
+                "    ),",
+                "    FuckMeAssDownAPP = List.Reverse(FuckMeAssUpAPP),",
+                "    FuckMeLessAPP = List.RemoveFirstN(FuckMeAPP),",
+                "    FuckMeUpAndDownAPP = List.Combine({FuckMeAssDownAPP, FuckMeLessAPP}),",
+                "    FuckShitPiss = Table.FromColumns(Table.ToColumns(BufferedStart) & {FuckMeUpAndDown} & {FuckMeUpAndDownAPP}, Table.ColumnNames(BufferedStart) & {\"Index EVOPAARPP\"} & {\"Index EVOPAPP\"}),",
+                "    #\"Colonnes supprimées2\" = Table.RemoveColumns(FuckShitPiss,{\"PPI\", \"Index\"}),",
+                "    #\"Type modifié2\" = Table.TransformColumnTypes(#\"Colonnes supprimées2\",{{\"Index EVOPAARPP\", type number}, {\"Index EVOPAPP\", type number}})",
+                "in",
+                "    #\"Type modifié2\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "TCRED-EMPLOI-31-DECEMBRE-BASE-2018",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "TIME_PERIOD",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "c01eaf50-8b08-48d2-853b-ad2101af7431",
+            "sourceColumn": "TIME_PERIOD",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "VALUE",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "00bc4f26-d7b1-4d6a-a666-4b2a8d3791bf",
+            "sourceColumn": "VALUE",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "REF_AREA",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ab956434-d536-42f4-84dc-d7879b50fea0",
+            "sourceColumn": "REF_AREA",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "NAF2_RGP",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "9d8aa0d3-2de2-49f2-8f3a-f049baaf8e11",
+            "sourceColumn": "NAF2_RGP",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Yearly change",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "fc1dbcb9-5132-4931-828f-d08d686e92e5",
+            "sourceColumn": "Yearly change",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "bb147dee-6bb4-4ecf-96e1-c1b7b5976d7e",
+        "partitions": [
+          {
+            "name": "TCRED-EMPLOI-31-DECEMBRE-BASE-2018",
+            "mode": "import",
+            "queryGroup": "Séries INSEE",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Xml.Tables(Web.Contents(\"https://bdm.insee.fr/series/sdmx/data/TCRED-EMPLOI-31-DECEMBRE-BASE-2018/A.EMPLOI_31_DECEMBRE..VALEUR_ABSOLUE.TOT.....\")),",
+                "    Table1 = Source{1}[Table],",
+                "    Table0 = Table1{0}[Table],",
+                "    Table2 = Table0{0}[Table],",
+                "    #\"Type modifié\" = Table.TransformColumnTypes(Table2,{{\"Attribute:FREQ\", type text}, {\"Attribute:UNIT_MEASURE\", type text}, {\"Attribute:INDICATEUR\", type text}, {\"Attribute:UNIT_MULT\", Int64.Type}, {\"Attribute:NATURE\", type text}, {\"Attribute:CAT_POP_ACT\", type text}, {\"Attribute:SERIE_ARRETEE\", type logical}, {\"Attribute:BASIND\", Int64.Type}, {\"Attribute:REF_AREA\", type text}, {\"Attribute:CORRECTION\", type text}, {\"Attribute:NAF2_RGP\", type text}, {\"Attribute:IDBANK\", Int64.Type}, {\"Attribute:TITLE_FR\", type text}, {\"Attribute:TITLE_EN\", type text}, {\"Attribute:LAST_UPDATE\", type date}, {\"Attribute:DECIMALS\", Int64.Type}}),",
+                "    #\"Colonnes supprimées\" = Table.RemoveColumns(#\"Type modifié\",{\"Attribute:FREQ\", \"Attribute:UNIT_MEASURE\", \"Attribute:INDICATEUR\", \"Attribute:UNIT_MULT\", \"Attribute:NATURE\", \"Attribute:CAT_POP_ACT\", \"Attribute:SERIE_ARRETEE\", \"Attribute:BASIND\", \"Attribute:CORRECTION\", \"Attribute:LAST_UPDATE\", \"Attribute:DECIMALS\", \"Attribute:TITLE_EN\"}),",
+                "    #\"Obs développé\" = Table.ExpandTableColumn(#\"Colonnes supprimées\", \"Obs\", {\"Attribute:TIME_PERIOD\", \"Attribute:OBS_VALUE\", \"Attribute:OBS_STATUS\", \"Attribute:OBS_QUAL\", \"Attribute:OBS_TYPE\", \"Attribute:OBS_REV\"}, {\"Obs.Attribute:TIME_PERIOD\", \"Obs.Attribute:OBS_VALUE\", \"Obs.Attribute:OBS_STATUS\", \"Obs.Attribute:OBS_QUAL\", \"Obs.Attribute:OBS_TYPE\", \"Obs.Attribute:OBS_REV\"}),",
+                "    #\"Colonnes renommées\" = Table.RenameColumns(#\"Obs développé\",{{\"Obs.Attribute:TIME_PERIOD\", \"TIME_PERIOD\"}, {\"Obs.Attribute:OBS_VALUE\", \"VALUE\"}, {\"Obs.Attribute:OBS_STATUS\", \"OBS_STATUS\"}, {\"Obs.Attribute:OBS_QUAL\", \"OBS_QUAL\"}, {\"Obs.Attribute:OBS_TYPE\", \"OBS_TYPE\"}, {\"Obs.Attribute:OBS_REV\", \"OBS_REV\"}, {\"Attribute:REF_AREA\", \"REF_AREA\"}, {\"Attribute:NAF2_RGP\", \"NAF2_RGP\"}, {\"Attribute:IDBANK\", \"IDBANK\"}, {\"Attribute:TITLE_FR\", \"TITLE_FR\"}}),",
+                "    #\"Type modifié1\" = Table.TransformColumnTypes(#\"Colonnes renommées\",{{\"TIME_PERIOD\", type date}, {\"VALUE\", Int64.Type}}),",
+                "    #\"Colonnes supprimées1\" = Table.RemoveColumns(#\"Type modifié1\",{\"OBS_STATUS\", \"OBS_QUAL\", \"OBS_TYPE\", \"OBS_REV\", \"IDBANK\", \"TITLE_FR\"}),",
+                "    #\"Personnalisée ajoutée\" = Table.AddColumn(#\"Colonnes supprimées1\", \"TIME_PERIOD Y-1\", each Date.AddYears([TIME_PERIOD], -1)),",
+                "    #\"Requêtes fusionnées\" = Table.NestedJoin(#\"Personnalisée ajoutée\", {\"REF_AREA\", \"NAF2_RGP\", \"TIME_PERIOD Y-1\"}, #\"Personnalisée ajoutée\", {\"REF_AREA\", \"NAF2_RGP\", \"TIME_PERIOD\"}, \"Personnalisée ajoutée\", JoinKind.LeftOuter),",
+                "    #\"Personnalisée ajoutée développé\" = Table.ExpandTableColumn(#\"Requêtes fusionnées\", \"Personnalisée ajoutée\", {\"VALUE\"}, {\"Personnalisée ajoutée.VALUE\"}),",
+                "    #\"Colonnes renommées1\" = Table.RenameColumns(#\"Personnalisée ajoutée développé\",{{\"Personnalisée ajoutée.VALUE\", \"VALUE Y-1\"}}),",
+                "    #\"Personnalisée ajoutée1\" = Table.AddColumn(#\"Colonnes renommées1\", \"Yearly change\", each ( [VALUE] - [#\"VALUE Y-1\"] ) / [#\"VALUE Y-1\"]),",
+                "    #\"Type modifié2\" = Table.TransformColumnTypes(#\"Personnalisée ajoutée1\",{{\"Yearly change\", Percentage.Type}}),",
+                "    #\"Colonnes supprimées2\" = Table.RemoveColumns(#\"Type modifié2\",{\"TIME_PERIOD Y-1\", \"VALUE Y-1\"}),",
+                "    #\"Colonnes permutées\" = Table.ReorderColumns(#\"Colonnes supprimées2\",{\"TIME_PERIOD\", \"VALUE\", \"Yearly change\", \"REF_AREA\", \"NAF2_RGP\"})",
+                "in",
+                "    #\"Colonnes permutées\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "CL_ZONE_GEO",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0edd3d33-fa2b-45a3-ae5d-6e4907fa3440",
+            "sourceColumn": "ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "01cf10af-4589-4a9b-945a-7c7e59117d46",
+            "sourceColumn": "Name",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "e6c0799c-7bc9-413b-a7c5-541babde4ecf",
+        "measures": [
+          {
+            "name": "CountEmploiRegion",
+            "expression": "COUNTROWS('TCRED-EMPLOI-31-DECEMBRE-BASE-2018')",
+            "formatString": "0",
+            "lineageTag": "47c8d987-a894-4c36-b86b-f9ca97d96cc3"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "CL_ZONE_GEO",
+            "mode": "import",
+            "queryGroup": "Code lists INSEE",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Xml.Tables(Web.Contents(\"https://bdm.insee.fr/series/sdmx/codelist/FR1/CL_ZONE_GEO\")),",
+                "    Table1 = Source{1}[Table],",
+                "    Table0 = Table1{0}[Table],",
+                "    Table2 = Table0{0}[Table],",
+                "    Table3 = Table2{0}[Table],",
+                "    #\"Type modifié\" = Table.TransformColumnTypes(Table3,{{\"Attribute:id\", type text}, {\"Attribute:urn\", type text}, {\"Attribute:agencyID\", type text}, {\"Attribute:version\", type text}}),",
+                "    #\"Code développé\" = Table.ExpandTableColumn(#\"Type modifié\", \"Code\", {\"http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common\", \"Attribute:id\"}, {\"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common\", \"Code.Attribute:id\"}),",
+                "    #\"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common développé\" = Table.ExpandTableColumn(#\"Code développé\", \"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common\", {\"Name\"}, {\"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name\"}),",
+                "    #\"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name développé\" = Table.ExpandTableColumn(#\"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common développé\", \"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name\", {\"Element:Text\", \"http://www.w3.org/XML/1998/namespace\"}, {\"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name.Element:Text\", \"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name.http://www.w3\"}),",
+                "    #\"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name.http://www.w3 développé\" = Table.ExpandTableColumn(#\"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name développé\", \"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name.http://www.w3\", {\"Attribute:lang\"}, {\"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name.http://www..1\"}),",
+                "    #\"Colonnes supprimées\" = Table.RemoveColumns(#\"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name.http://www.w3 développé\",{\"http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common\", \"Attribute:id\", \"Attribute:urn\", \"Attribute:agencyID\", \"Attribute:version\"}),",
+                "    #\"Lignes filtrées\" = Table.SelectRows(#\"Colonnes supprimées\", each ([#\"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name.http://www..1\"] = \"fr\")),",
+                "    #\"Colonnes supprimées1\" = Table.RemoveColumns(#\"Lignes filtrées\",{\"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name.http://www..1\"}),",
+                "    #\"Colonnes permutées\" = Table.ReorderColumns(#\"Colonnes supprimées1\",{\"Code.Attribute:id\", \"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name.Element:Text\"}),",
+                "    #\"Colonnes renommées\" = Table.RenameColumns(#\"Colonnes permutées\",{{\"Code.Attribute:id\", \"ID\"}, {\"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name.Element:Text\", \"Name\"}})",
+                "in",
+                "    #\"Colonnes renommées\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "CL_NAF2_RGP",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4f072001-48a7-4477-818c-3f1152bff7e7",
+            "sourceColumn": "ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "NAME",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "45bb027e-576b-4b45-a7f6-3e4b8c67ff3a",
+            "sourceColumn": "NAME",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "d368c9c7-2177-47c4-b75f-8f2584621bc1",
+        "measures": [
+          {
+            "name": "CountEmploiSecteur",
+            "expression": "COUNTROWS('TCRED-EMPLOI-31-DECEMBRE-BASE-2018')",
+            "formatString": "0",
+            "lineageTag": "f86f3ea0-30fe-46ec-963b-f63c7d11c300"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "CL_NAF2_RGP",
+            "mode": "import",
+            "queryGroup": "Code lists INSEE",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Xml.Tables(Web.Contents(\"https://bdm.insee.fr/series/sdmx/codelist/FR1/CL_NAF2_RGP\")),",
+                "    Table1 = Source{1}[Table],",
+                "    Table0 = Table1{0}[Table],",
+                "    Table2 = Table0{0}[Table],",
+                "    Table3 = Table2{0}[Table],",
+                "    #\"Type modifié\" = Table.TransformColumnTypes(Table3,{{\"Attribute:id\", type text}, {\"Attribute:urn\", type text}, {\"Attribute:agencyID\", type text}, {\"Attribute:version\", type text}}),",
+                "    #\"Code développé\" = Table.ExpandTableColumn(#\"Type modifié\", \"Code\", {\"http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common\", \"Attribute:id\"}, {\"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common\", \"Code.Attribute:id\"}),",
+                "    #\"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common développé\" = Table.ExpandTableColumn(#\"Code développé\", \"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common\", {\"Name\"}, {\"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name\"}),",
+                "    #\"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name développé\" = Table.ExpandTableColumn(#\"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common développé\", \"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name\", {\"Element:Text\", \"http://www.w3.org/XML/1998/namespace\"}, {\"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name.Element:Text\", \"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name.http://www.w3\"}),",
+                "    #\"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name.http://www.w3 développé\" = Table.ExpandTableColumn(#\"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name développé\", \"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name.http://www.w3\", {\"Attribute:lang\"}, {\"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name.http://www..1\"}),",
+                "    #\"Lignes filtrées\" = Table.SelectRows(#\"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name.http://www.w3 développé\", each ([#\"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name.http://www..1\"] = \"fr\")),",
+                "    #\"Colonnes supprimées\" = Table.RemoveColumns(#\"Lignes filtrées\",{\"http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common\", \"Attribute:id\", \"Attribute:urn\", \"Attribute:agencyID\", \"Attribute:version\", \"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name.http://www..1\"}),",
+                "    #\"Colonnes permutées\" = Table.ReorderColumns(#\"Colonnes supprimées\",{\"Code.Attribute:id\", \"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name.Element:Text\"}),",
+                "    #\"Colonnes renommées\" = Table.RenameColumns(#\"Colonnes permutées\",{{\"Code.Attribute:id\", \"ID\"}, {\"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name.Element:Text\", \"NAME\"}})",
+                "in",
+                "    #\"Colonnes renommées\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "EMPLOI-BIT-TRIM",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "TIME_PERIOD",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "b789e500-21d2-462d-891a-7e8cafc33d38",
+            "sourceColumn": "TIME_PERIOD",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "AGE",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "399e6606-61af-4088-a9e3-6fe4df3e0b92",
+            "sourceColumn": "AGE",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "SEXE",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "4fd82905-2ee4-47a9-8ecf-1ed69dc79476",
+            "sourceColumn": "SEXE",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Espérance apparente d'activité",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "8a2f32dc-1fa5-48bd-92db-37026275343d",
+            "sourceColumn": "Espérance apparente d'activité",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Taux d'emploi en CDD ou intérim",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "9b068b93-9a4d-4dd7-ab10-6f8001fc338e",
+            "sourceColumn": "Taux d'emploi en CDD ou intérim",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Taux d'emploi en CDI",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "4797d784-35f7-4b72-a2b0-683d06b7342b",
+            "sourceColumn": "Taux d'emploi en CDI",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Taux d'emploi en équivalent temps plein",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "3f182d44-982a-44d8-ad42-eb40f2a20600",
+            "sourceColumn": "Taux d'emploi en équivalent temps plein",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Nombre de personnes en situation de sous-emploi : temps partiel, souhaitant travailler plus d'heures, disponible pour le faire et à la recherche d'un autre emploi",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "f200c6ec-a02d-43bf-bd3d-983bff55bfd9",
+            "sourceColumn": "Nombre de personnes en situation de sous-emploi : temps partiel, souhaitant travailler plus d'heures, disponible pour le faire et à la recherche d'un autre emploi",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Nombre de personnes en situation de sous-emploi : temps partiel, souhaitant travailler plus d'heures, disponible pour le faire mais sans recherche d'un autre emploi",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "55742cd6-e935-41b9-a436-ce220652d2d2",
+            "sourceColumn": "Nombre de personnes en situation de sous-emploi : temps partiel, souhaitant travailler plus d'heures, disponible pour le faire mais sans recherche d'un autre emploi",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Nombre de personnes en situation de sous-emploi : temps plein, ou temps partiel, ayant involontairement travaillé moins que d'habitude",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "c92fa12b-3483-44f9-bad9-78816b70025b",
+            "sourceColumn": "Nombre de personnes en situation de sous-emploi : temps plein, ou temps partiel, ayant involontairement travaillé moins que d'habitude",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Nombre total des personnes en situation de sous-emploi",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "4575b219-6cf7-4899-bb75-79710152e0ff",
+            "sourceColumn": "Nombre total des personnes en situation de sous-emploi",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Taux de personnes en situation de sous-emploi : temps partiel, souhaitant travailler plus d'heures, disponible pour le faire et à la recherche d'un autre emploi",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "b44cf0d8-c969-4011-b3a8-8b9ab5c3528f",
+            "sourceColumn": "Taux de personnes en situation de sous-emploi : temps partiel, souhaitant travailler plus d'heures, disponible pour le faire et à la recherche d'un autre emploi",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Taux de personnes en situation de sous-emploi : temps partiel, souhaitant travailler plus d'heures, disponible pour le faire mais sans recherche d'un autre emploi",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "e2ef481a-070c-40bf-9024-cc7a954a0d57",
+            "sourceColumn": "Taux de personnes en situation de sous-emploi : temps partiel, souhaitant travailler plus d'heures, disponible pour le faire mais sans recherche d'un autre emploi",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Taux de personnes en situation de sous-emploi : temps plein, ou temps partiel, ayant involontairement travaillé moins que d'habitude",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "b7686be2-91ed-4da2-8321-7dc5507c6ed5",
+            "sourceColumn": "Taux de personnes en situation de sous-emploi : temps plein, ou temps partiel, ayant involontairement travaillé moins que d'habitude",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Taux de personnes en situation de sous-emploi",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "6d0a2f3a-38dc-4975-b3bf-0f5945015f2f",
+            "sourceColumn": "Taux de personnes en situation de sous-emploi",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Taux d'emploi sous-jacent",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "91705b34-3965-4813-902b-b03587261b8c",
+            "sourceColumn": "Taux d'emploi sous-jacent",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Taux d'activité",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "5d154ad6-0cc0-4d91-95b7-1ff9cd83137c",
+            "sourceColumn": "Taux d'activité",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Taux d'emploi",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "a38375aa-0a43-4b85-983c-92396b330c2c",
+            "sourceColumn": "Taux d'emploi",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Taux d'emploi à temps complet",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "f66f9f4c-e105-4e9d-b2f6-645af42a98ad",
+            "sourceColumn": "Taux d'emploi à temps complet",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Taux d'emploi à temps partiel",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "744e4c28-eecb-4fa0-8bea-101d4bb2fc32",
+            "sourceColumn": "Taux d'emploi à temps partiel",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Part du temps partiel dans l'emploi",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "85463ba9-12b9-4c98-b3c4-9b19c3ea0c20",
+            "sourceColumn": "Part du temps partiel dans l'emploi",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Nombre moyen d’heures travaillées par semaine et par emploi",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "54d75b82-2537-4085-8ee9-386823907aaa",
+            "sourceColumn": "Nombre moyen d’heures travaillées par semaine et par emploi",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Part des jeunes de 15 à 29 ans qui ne sont ni en emploi ni en formation",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "4883638b-761e-40f9-9aa1-ef8292dba2e6",
+            "sourceColumn": "Part des jeunes de 15 à 29 ans qui ne sont ni en emploi ni en formation",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Ratio CDI / CDD+Interim",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "expression": "'EMPLOI-BIT-TRIM'[Taux d'emploi en CDI] / 'EMPLOI-BIT-TRIM'[Taux d'emploi en CDD ou intérim]",
+            "isDataTypeInferred": true,
+            "lineageTag": "c1528ea0-df5e-45eb-9b3c-b7756738d5f8",
+            "summarizeBy": "sum",
+            "type": "calculated"
+          },
+          {
+            "name": "Ratio Temps complet / Temps partiel",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "expression": "'EMPLOI-BIT-TRIM'[Taux d'emploi à temps complet] / 'EMPLOI-BIT-TRIM'[Taux d'emploi à temps partiel]",
+            "isDataTypeInferred": true,
+            "lineageTag": "b1ff8160-732d-4fd4-82cb-1d34910cc920",
+            "summarizeBy": "sum",
+            "type": "calculated"
+          },
+          {
+            "name": "Taux temps partiel",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "expression": "'EMPLOI-BIT-TRIM'[Taux d'emploi à temps partiel] / ('EMPLOI-BIT-TRIM'[Taux d'emploi à temps complet] + 'EMPLOI-BIT-TRIM'[Taux d'emploi à temps partiel]) * 100",
+            "isDataTypeInferred": true,
+            "lineageTag": "42acba09-e9ff-4202-8bd6-5c01983a1dba",
+            "summarizeBy": "sum",
+            "type": "calculated"
+          },
+          {
+            "name": "Taux CDD ou intérim",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "expression": "'EMPLOI-BIT-TRIM'[Taux d'emploi en CDD ou intérim] / ('EMPLOI-BIT-TRIM'[Taux d'emploi en CDI] + 'EMPLOI-BIT-TRIM'[Taux d'emploi en CDD ou intérim]) * 100",
+            "isDataTypeInferred": true,
+            "lineageTag": "8f4a52e2-f4b9-462f-b57f-a84db5bf9898",
+            "summarizeBy": "sum",
+            "type": "calculated"
+          }
+        ],
+        "lineageTag": "fa937483-5963-4b80-99e1-0c83a7cc0c6d",
+        "partitions": [
+          {
+            "name": "EMPLOI-BIT-TRIM",
+            "mode": "import",
+            "queryGroup": "Séries INSEE",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Xml.Tables(Web.Contents(\"https://bdm.insee.fr/series/sdmx/data/EMPLOI-BIT-TRIM/T...FR-D976.....FALSE\")),",
+                "    Table1 = Source{1}[Table],",
+                "    Table0 = Table1{0}[Table],",
+                "    Table2 = Table0{0}[Table],",
+                "    #\"Type modifié\" = Table.TransformColumnTypes(Table2,{{\"Attribute:AGE\", type text}, {\"Attribute:UNIT_MULT\", Int64.Type}, {\"Attribute:UNIT_MEASURE\", type text}, {\"Attribute:INDICATEUR\", type text}, {\"Attribute:FREQ\", type text}, {\"Attribute:REF_AREA\", type text}, {\"Attribute:NATURE\", type text}, {\"Attribute:SERIE_ARRETEE\", type logical}, {\"Attribute:CORRECTION\", type text}, {\"Attribute:SEXE\", Int64.Type}, {\"Attribute:IDBANK\", Int64.Type}, {\"Attribute:TITLE_FR\", type text}, {\"Attribute:TITLE_EN\", type text}, {\"Attribute:LAST_UPDATE\", type date}, {\"Attribute:DECIMALS\", Int64.Type}}),",
+                "    #\"Colonnes renommées\" = Table.RenameColumns(#\"Type modifié\",{{\"Attribute:AGE\", \"AGE\"}}),",
+                "    #\"Colonnes supprimées\" = Table.RemoveColumns(#\"Colonnes renommées\",{\"Attribute:SERIE_ARRETEE\", \"Attribute:CORRECTION\", \"Attribute:IDBANK\", \"Attribute:TITLE_FR\", \"Attribute:TITLE_EN\", \"Attribute:LAST_UPDATE\", \"Attribute:DECIMALS\", \"Attribute:REF_AREA\"}),",
+                "    #\"Obs développé\" = Table.ExpandTableColumn(#\"Colonnes supprimées\", \"Obs\", {\"Attribute:TIME_PERIOD\", \"Attribute:OBS_VALUE\", \"Attribute:OBS_STATUS\", \"Attribute:OBS_QUAL\", \"Attribute:OBS_TYPE\"}, {\"Obs.Attribute:TIME_PERIOD\", \"Obs.Attribute:OBS_VALUE\", \"Obs.Attribute:OBS_STATUS\", \"Obs.Attribute:OBS_QUAL\", \"Obs.Attribute:OBS_TYPE\"}),",
+                "    #\"Colonnes renommées1\" = Table.RenameColumns(#\"Obs développé\",{{\"Obs.Attribute:OBS_VALUE\", \"OBS_VALUE\"}, {\"Obs.Attribute:OBS_STATUS\", \"OBS_STATUS\"}, {\"Obs.Attribute:OBS_QUAL\", \"OBS_QUAL\"}, {\"Obs.Attribute:OBS_TYPE\", \"OBS_TYPE\"}, {\"Obs.Attribute:TIME_PERIOD\", \"TIME_PERIOD\"}}),",
+                "    #\"Personnalisée ajoutée\" = Table.AddColumn(#\"Colonnes renommées1\", \"Personnalisé\", each #date(Number.From(Text.Start([TIME_PERIOD], 4)), (Number.From(Text.End([TIME_PERIOD], 1)) - 1) * 3 + 1, 1)),",
+                "    #\"Colonnes supprimées1\" = Table.RemoveColumns(#\"Personnalisée ajoutée\",{\"TIME_PERIOD\"}),",
+                "    #\"Colonnes permutées\" = Table.ReorderColumns(#\"Colonnes supprimées1\",{\"Personnalisé\", \"OBS_VALUE\", \"OBS_STATUS\", \"OBS_QUAL\", \"OBS_TYPE\", \"AGE\", \"Attribute:UNIT_MULT\", \"Attribute:UNIT_MEASURE\", \"Attribute:INDICATEUR\", \"Attribute:FREQ\", \"Attribute:NATURE\", \"Attribute:SEXE\"}),",
+                "    #\"Colonnes renommées2\" = Table.RenameColumns(#\"Colonnes permutées\",{{\"Personnalisé\", \"TIME_PERIOD\"}, {\"Attribute:SEXE\", \"SEXE\"}}),",
+                "    #\"Type modifié1\" = Table.TransformColumnTypes(#\"Colonnes renommées2\",{{\"TIME_PERIOD\", type date}}),",
+                "    #\"Valeur remplacée\" = Table.ReplaceValue(#\"Type modifié1\",\".\",\",\",Replacer.ReplaceText,{\"OBS_VALUE\"}),",
+                "    #\"Type modifié2\" = Table.TransformColumnTypes(#\"Valeur remplacée\",{{\"OBS_VALUE\", type number}}),",
+                "    #\"Colonnes supprimées2\" = Table.RemoveColumns(#\"Type modifié2\",{\"OBS_STATUS\", \"OBS_QUAL\", \"OBS_TYPE\", \"Attribute:UNIT_MULT\", \"Attribute:UNIT_MEASURE\", \"Attribute:FREQ\", \"Attribute:NATURE\"}),",
+                "    #\"Colonnes permutées1\" = Table.ReorderColumns(#\"Colonnes supprimées2\",{\"Attribute:INDICATEUR\", \"TIME_PERIOD\", \"OBS_VALUE\", \"AGE\", \"SEXE\"}),",
+                "    #\"Requêtes fusionnées\" = Table.NestedJoin(#\"Colonnes permutées1\", {\"Attribute:INDICATEUR\"}, CL_INDICATEUR, {\"ID\"}, \"CL_INDICATEUR\", JoinKind.LeftOuter),",
+                "    #\"CL_INDICATEUR développé\" = Table.ExpandTableColumn(#\"Requêtes fusionnées\", \"CL_INDICATEUR\", {\"NAME\"}, {\"CL_INDICATEUR.NAME\"}),",
+                "    #\"Colonnes permutées3\" = Table.ReorderColumns(#\"CL_INDICATEUR développé\",{\"TIME_PERIOD\", \"CL_INDICATEUR.NAME\", \"Attribute:INDICATEUR\", \"OBS_VALUE\", \"AGE\", \"SEXE\"}),",
+                "    #\"Colonnes supprimées3\" = Table.RemoveColumns(#\"Colonnes permutées3\",{\"Attribute:INDICATEUR\"}),",
+                "    #\"Colonne dynamique\" = Table.Pivot(#\"Colonnes supprimées3\", List.Distinct(#\"Colonnes supprimées3\"[CL_INDICATEUR.NAME]), \"CL_INDICATEUR.NAME\", \"OBS_VALUE\", List.Sum)",
+                "in",
+                "    #\"Colonne dynamique\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "TAUX-CHOMAGE",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "TIME_PERIOD",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "0582769e-4d2a-4411-98de-822119c93318",
+            "sourceColumn": "TIME_PERIOD",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "OBS_VALUE",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "f093b045-604c-409c-8f8e-ba4b4b6f3d62",
+            "sourceColumn": "OBS_VALUE",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "REF_AREA",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6653afc0-742b-496d-be05-6e74bf54a7f3",
+            "sourceColumn": "REF_AREA",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "b88864cd-0ca3-470f-b82a-3d073e27e1b5",
+        "partitions": [
+          {
+            "name": "TAUX-CHOMAGE",
+            "mode": "import",
+            "queryGroup": "Séries INSEE",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Xml.Tables(Web.Contents(\"https://bdm.insee.fr/series/sdmx/data/TAUX-CHOMAGE/T.TAUX_CHOMAGE_LOCALISE.PROPORTION..POURCENT.CVS\")),",
+                "    Table1 = Source{1}[Table],",
+                "    Table0 = Table1{0}[Table],",
+                "    Table2 = Table0{0}[Table],",
+                "    #\"Type modifié\" = Table.TransformColumnTypes(Table2,{{\"Attribute:REF_AREA\", type text}, {\"Attribute:CORRECTION\", type text}, {\"Attribute:INDICATEUR\", type text}, {\"Attribute:UNIT_MEASURE\", type text}, {\"Attribute:UNIT_MULT\", Int64.Type}, {\"Attribute:NATURE\", type text}, {\"Attribute:FREQ\", type text}, {\"Attribute:IDBANK\", Int64.Type}, {\"Attribute:TITLE_FR\", type text}, {\"Attribute:TITLE_EN\", type text}, {\"Attribute:LAST_UPDATE\", type date}, {\"Attribute:DECIMALS\", Int64.Type}}),",
+                "    #\"Colonnes renommées\" = Table.RenameColumns(#\"Type modifié\",{{\"Attribute:REF_AREA\", \"REF_AREA\"}}),",
+                "    #\"Colonnes supprimées\" = Table.RemoveColumns(#\"Colonnes renommées\",{\"Attribute:CORRECTION\", \"Attribute:INDICATEUR\", \"Attribute:UNIT_MEASURE\", \"Attribute:UNIT_MULT\", \"Attribute:NATURE\", \"Attribute:FREQ\", \"Attribute:IDBANK\", \"Attribute:TITLE_FR\", \"Attribute:TITLE_EN\", \"Attribute:LAST_UPDATE\", \"Attribute:DECIMALS\"}),",
+                "    #\"Obs développé\" = Table.ExpandTableColumn(#\"Colonnes supprimées\", \"Obs\", {\"Attribute:TIME_PERIOD\", \"Attribute:OBS_VALUE\", \"Attribute:OBS_STATUS\", \"Attribute:OBS_QUAL\", \"Attribute:OBS_TYPE\", \"Attribute:OBS_REV\"}, {\"Obs.Attribute:TIME_PERIOD\", \"Obs.Attribute:OBS_VALUE\", \"Obs.Attribute:OBS_STATUS\", \"Obs.Attribute:OBS_QUAL\", \"Obs.Attribute:OBS_TYPE\", \"Obs.Attribute:OBS_REV\"}),",
+                "    #\"Colonnes renommées1\" = Table.RenameColumns(#\"Obs développé\",{{\"Obs.Attribute:TIME_PERIOD\", \"TIME_PERIOD\"}, {\"Obs.Attribute:OBS_VALUE\", \"OBS_VALUE\"}, {\"Obs.Attribute:OBS_STATUS\", \"OBS_STATUS\"}, {\"Obs.Attribute:OBS_QUAL\", \"OBS_QUAL\"}, {\"Obs.Attribute:OBS_TYPE\", \"OBS_TYPE\"}}),",
+                "    #\"Colonnes supprimées1\" = Table.RemoveColumns(#\"Colonnes renommées1\",{\"Obs.Attribute:OBS_REV\", \"OBS_STATUS\", \"OBS_QUAL\", \"OBS_TYPE\"}),",
+                "    #\"Personnalisée ajoutée1\" = Table.AddColumn(#\"Colonnes supprimées1\", \"Personnalisé.1\", each #date(Number.From(Text.Start([TIME_PERIOD], 4)), (Number.From(Text.End([TIME_PERIOD], 1)) - 1) * 3 + 1, 1)),",
+                "    #\"Valeur remplacée\" = Table.ReplaceValue(#\"Personnalisée ajoutée1\",\".\",\",\",Replacer.ReplaceText,{\"OBS_VALUE\"}),",
+                "    #\"Type modifié1\" = Table.TransformColumnTypes(#\"Valeur remplacée\",{{\"Personnalisé.1\", type date}, {\"OBS_VALUE\", type number}}),",
+                "    #\"Colonnes supprimées2\" = Table.RemoveColumns(#\"Type modifié1\",{\"TIME_PERIOD\"}),",
+                "    #\"Colonnes renommées2\" = Table.RenameColumns(#\"Colonnes supprimées2\",{{\"Personnalisé.1\", \"TIME_PERIOD\"}}),",
+                "    #\"Colonnes permutées\" = Table.ReorderColumns(#\"Colonnes renommées2\",{\"TIME_PERIOD\", \"OBS_VALUE\", \"REF_AREA\"})",
+                "in",
+                "    #\"Colonnes permutées\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "CL_INDICATEUR",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "fb925506-0b71-4a1a-9411-9410f893ae04",
+            "sourceColumn": "ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "NAME",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4b49eba1-72a7-4e63-be52-23221a63f6ea",
+            "sourceColumn": "NAME",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "07404ced-d364-471a-ab47-ef5c9d442e7a",
+        "partitions": [
+          {
+            "name": "CL_INDICATEUR",
+            "mode": "import",
+            "queryGroup": "Code lists INSEE",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Xml.Tables(Web.Contents(\"https://bdm.insee.fr/series/sdmx/codelist/FR1/CL_INDICATEUR\")),",
+                "    Table1 = Source{1}[Table],",
+                "    Table0 = Table1{0}[Table],",
+                "    Table2 = Table0{0}[Table],",
+                "    Table3 = Table2{0}[Table],",
+                "    #\"Type modifié\" = Table.TransformColumnTypes(Table3,{{\"Attribute:id\", type text}, {\"Attribute:urn\", type text}, {\"Attribute:agencyID\", type text}, {\"Attribute:version\", type text}}),",
+                "    #\"Code développé\" = Table.ExpandTableColumn(#\"Type modifié\", \"Code\", {\"http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common\", \"Attribute:id\"}, {\"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common\", \"Code.Attribute:id\"}),",
+                "    #\"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common développé\" = Table.ExpandTableColumn(#\"Code développé\", \"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common\", {\"Name\"}, {\"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name\"}),",
+                "    #\"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name développé\" = Table.ExpandTableColumn(#\"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common développé\", \"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name\", {\"Element:Text\", \"http://www.w3.org/XML/1998/namespace\"}, {\"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name.Element:Text\", \"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name.http://www.w3\"}),",
+                "    #\"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name.http://www.w3 développé\" = Table.ExpandTableColumn(#\"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name développé\", \"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name.http://www.w3\", {\"Attribute:lang\"}, {\"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name.http://www..1\"}),",
+                "    #\"Lignes filtrées\" = Table.SelectRows(#\"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name.http://www.w3 développé\", each ([#\"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name.http://www..1\"] = \"fr\")),",
+                "    #\"Colonnes supprimées\" = Table.RemoveColumns(#\"Lignes filtrées\",{\"Attribute:id\", \"Attribute:urn\", \"Attribute:agencyID\", \"Attribute:version\", \"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name.http://www..1\", \"http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common\"}),",
+                "    #\"Colonnes permutées\" = Table.ReorderColumns(#\"Colonnes supprimées\",{\"Code.Attribute:id\", \"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name.Element:Text\"}),",
+                "    #\"Colonnes renommées\" = Table.RenameColumns(#\"Colonnes permutées\",{{\"Code.Attribute:id\", \"ID\"}, {\"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name.Element:Text\", \"NAME\"}})",
+                "in",
+                "    #\"Colonnes renommées\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "CL_SEXE",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "971e7179-eb12-4967-9441-21b7d1970a9e",
+            "sourceColumn": "ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "NAME",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ef20b966-63c6-4de9-aeb4-d9f0c92770df",
+            "sourceColumn": "NAME",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "fc6620ab-17ee-42d2-a799-89e7e0f74657",
+        "partitions": [
+          {
+            "name": "CL_SEXE",
+            "mode": "import",
+            "queryGroup": "Code lists INSEE",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Xml.Tables(Web.Contents(\"https://bdm.insee.fr/series/sdmx/codelist/FR1/CL_SEXE\")),",
+                "    Table1 = Source{1}[Table],",
+                "    Table0 = Table1{0}[Table],",
+                "    Table2 = Table0{0}[Table],",
+                "    Table3 = Table2{0}[Table],",
+                "    #\"Type modifié\" = Table.TransformColumnTypes(Table3,{{\"Attribute:id\", type text}, {\"Attribute:urn\", type text}, {\"Attribute:agencyID\", type text}, {\"Attribute:version\", type text}}),",
+                "    #\"Code développé\" = Table.ExpandTableColumn(#\"Type modifié\", \"Code\", {\"http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common\", \"Attribute:id\"}, {\"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common\", \"Code.Attribute:id\"}),",
+                "    #\"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common développé\" = Table.ExpandTableColumn(#\"Code développé\", \"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common\", {\"Name\"}, {\"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name\"}),",
+                "    #\"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name développé\" = Table.ExpandTableColumn(#\"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common développé\", \"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name\", {\"Element:Text\", \"http://www.w3.org/XML/1998/namespace\"}, {\"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name.Element:Text\", \"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name.http://www.w3\"}),",
+                "    #\"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name.http://www.w3 développé\" = Table.ExpandTableColumn(#\"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name développé\", \"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name.http://www.w3\", {\"Attribute:lang\"}, {\"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name.http://www..1\"}),",
+                "    #\"Lignes filtrées\" = Table.SelectRows(#\"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name.http://www.w3 développé\", each ([#\"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name.http://www..1\"] = \"fr\")),",
+                "    #\"Colonnes supprimées\" = Table.RemoveColumns(#\"Lignes filtrées\",{\"http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common\", \"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name.http://www..1\", \"Attribute:id\", \"Attribute:urn\", \"Attribute:agencyID\", \"Attribute:version\"}),",
+                "    #\"Colonnes permutées\" = Table.ReorderColumns(#\"Colonnes supprimées\",{\"Code.Attribute:id\", \"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name.Element:Text\"}),",
+                "    #\"Colonnes renommées\" = Table.RenameColumns(#\"Colonnes permutées\",{{\"Code.Attribute:id\", \"ID\"}, {\"Code.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common.Name.Element:Text\", \"NAME\"}})",
+                "in",
+                "    #\"Colonnes renommées\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "SI_DST_05TH_20",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "changedProperties": [
+          {
+            "property": "IsHidden"
+          }
+        ],
+        "columns": [
+          {
+            "name": "YEAR",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "9cf96323-4174-46d9-b074-67339150ac62",
+            "sourceColumn": "YEAR",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "SI_DST_05TH_20",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "48ce5d15-0053-4199-8a19-8b74c0141739",
+            "sourceColumn": "SI_DST_05TH_20",
+            "summarizeBy": "none"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "f0484c1a-45ce-4935-a4d4-f8411d9ab621",
+        "partitions": [
+          {
+            "name": "SI_DST_05TH_20",
+            "mode": "import",
+            "queryGroup": "Series WB",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Xml.Tables(Web.Contents(\"http://api.worldbank.org/v2/sdmx/rest/data/WDI/A.SI_DST_05TH_20.FRA/\")),",
+                "    #\"Table développé\" = Table.ExpandTableColumn(Source, \"Table\", {\"http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic\"}, {\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic\"}),",
+                "    #\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic développé\" = Table.ExpandTableColumn(#\"Table développé\", \"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic\", {\"Series\"}, {\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series\"}),",
+                "    #\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series développé\" = Table.ExpandTableColumn(#\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic développé\", \"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series\", {\"SeriesKey\", \"Obs\"}, {\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Seri\", \"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Obs\"}),",
+                "    #\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Seri développé\" = Table.ExpandTableColumn(#\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series développé\", \"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Seri\", {\"Value\"}, {\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Se.1\"}),",
+                "    #\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Se.1 développé\" = Table.ExpandTableColumn(#\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Seri développé\", \"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Se.1\", {\"Attribute:id\", \"Attribute:value\"}, {\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Se.2\", \"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Se.3\"}),",
+                "    #\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Obs développé\" = Table.ExpandTableColumn(#\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Se.1 développé\", \"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Obs\", {\"ObsDimension\", \"ObsValue\", \"Attributes\"}, {\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Obs.\", \"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Ob.1\", \"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Ob.2\"}),",
+                "    #\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Obs. développé\" = Table.ExpandTableColumn(#\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Obs développé\", \"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Obs.\", {\"Attribute:id\", \"Attribute:value\"}, {\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Ob.3\", \"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Ob.4\"}),",
+                "    #\"Colonnes supprimées\" = Table.RemoveColumns(#\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Obs. développé\",{\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Ob.3\"}),",
+                "    #\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Ob.1 développé\" = Table.ExpandTableColumn(#\"Colonnes supprimées\", \"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Ob.1\", {\"Attribute:value\"}, {\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Ob.3\"}),",
+                "    #\"Colonnes supprimées1\" = Table.RemoveColumns(#\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Ob.1 développé\",{\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Ob.2\"}),",
+                "    #\"Lignes filtrées\" = Table.SelectRows(#\"Colonnes supprimées1\", each ([#\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Se.3\"] = \"SI_DST_05TH_20\")),",
+                "    #\"Colonnes supprimées2\" = Table.RemoveColumns(#\"Lignes filtrées\",{\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Se.2\"}),",
+                "    #\"Colonnes supprimées3\" = Table.RemoveColumns(#\"Colonnes supprimées2\",{\"Name\", \"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Se.3\"}),",
+                "    #\"Colonnes renommées\" = Table.RenameColumns(#\"Colonnes supprimées3\",{{\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Ob.4\", \"YEAR\"}, {\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Ob.3\", \"SI_DST_05TH_20\"}})",
+                "in",
+                "    #\"Colonnes renommées\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "SI_DST_04TH_20",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "changedProperties": [
+          {
+            "property": "IsHidden"
+          }
+        ],
+        "columns": [
+          {
+            "name": "YEAR",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "b5c6f55c-d99a-4fce-8c61-8a2d7cb32c83",
+            "sourceColumn": "YEAR",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "SI_DST_04TH_20",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "1fd5b7ba-c2dd-4d14-830d-00ee636af1b3",
+            "sourceColumn": "SI_DST_04TH_20",
+            "summarizeBy": "none"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "747a325b-96ce-4f1f-8039-1ac8d132fd90",
+        "partitions": [
+          {
+            "name": "SI_DST_04TH_20",
+            "mode": "import",
+            "queryGroup": "Series WB",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Xml.Tables(Web.Contents(\"http://api.worldbank.org/v2/sdmx/rest/data/WDI/A.SI_DST_04TH_20.FRA/\")),",
+                "    #\"Table développé\" = Table.ExpandTableColumn(Source, \"Table\", {\"http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic\"}, {\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic\"}),",
+                "    #\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic développé\" = Table.ExpandTableColumn(#\"Table développé\", \"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic\", {\"Series\"}, {\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series\"}),",
+                "    #\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series développé\" = Table.ExpandTableColumn(#\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic développé\", \"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series\", {\"SeriesKey\", \"Obs\"}, {\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Seri\", \"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Obs\"}),",
+                "    #\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Obs développé\" = Table.ExpandTableColumn(#\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series développé\", \"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Obs\", {\"ObsDimension\", \"ObsValue\"}, {\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Obs.\", \"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Ob.1\"}),",
+                "    #\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Obs. développé\" = Table.ExpandTableColumn(#\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Obs développé\", \"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Obs.\", {\"Attribute:value\"}, {\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Ob.2\"}),",
+                "    #\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Ob.1 développé\" = Table.ExpandTableColumn(#\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Obs. développé\", \"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Ob.1\", {\"Attribute:value\"}, {\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Ob.3\"}),",
+                "    #\"Lignes filtrées\" = Table.SelectRows(#\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Ob.1 développé\", each ([Name] = \"DataSet\")),",
+                "    #\"Colonnes supprimées\" = Table.RemoveColumns(#\"Lignes filtrées\",{\"Name\", \"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Seri\"}),",
+                "    #\"Colonnes renommées\" = Table.RenameColumns(#\"Colonnes supprimées\",{{\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Ob.2\", \"YEAR\"}, {\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Ob.3\", \"SI_DST_04TH_20\"}})",
+                "in",
+                "    #\"Colonnes renommées\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "SI_DST_03RD_20",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "changedProperties": [
+          {
+            "property": "IsHidden"
+          }
+        ],
+        "columns": [
+          {
+            "name": "YEAR",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "a6760738-bab2-4e84-a444-e62c74e3c2c4",
+            "sourceColumn": "YEAR",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "SI_DST_04TH_20",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "b741a7f5-18f8-49bc-89be-6ed74bf7fc80",
+            "sourceColumn": "SI_DST_04TH_20",
+            "summarizeBy": "none"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "3d3238c7-d05e-48fd-98ec-4bad3151a58f",
+        "partitions": [
+          {
+            "name": "SI_DST_03RD_20",
+            "mode": "import",
+            "queryGroup": "Series WB",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Xml.Tables(Web.Contents(\"http://api.worldbank.org/v2/sdmx/rest/data/WDI/A.SI_DST_03RD_20.FRA/\")),",
+                "    #\"Table développé\" = Table.ExpandTableColumn(Source, \"Table\", {\"http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic\"}, {\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic\"}),",
+                "    #\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic développé\" = Table.ExpandTableColumn(#\"Table développé\", \"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic\", {\"Series\"}, {\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series\"}),",
+                "    #\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series développé\" = Table.ExpandTableColumn(#\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic développé\", \"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series\", {\"SeriesKey\", \"Obs\"}, {\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Seri\", \"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Obs\"}),",
+                "    #\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Obs développé\" = Table.ExpandTableColumn(#\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series développé\", \"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Obs\", {\"ObsDimension\", \"ObsValue\"}, {\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Obs.\", \"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Ob.1\"}),",
+                "    #\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Obs. développé\" = Table.ExpandTableColumn(#\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Obs développé\", \"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Obs.\", {\"Attribute:value\"}, {\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Ob.2\"}),",
+                "    #\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Ob.1 développé\" = Table.ExpandTableColumn(#\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Obs. développé\", \"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Ob.1\", {\"Attribute:value\"}, {\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Ob.3\"}),",
+                "    #\"Lignes filtrées\" = Table.SelectRows(#\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Ob.1 développé\", each ([Name] = \"DataSet\")),",
+                "    #\"Colonnes supprimées\" = Table.RemoveColumns(#\"Lignes filtrées\",{\"Name\", \"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Seri\"}),",
+                "    #\"Colonnes renommées\" = Table.RenameColumns(#\"Colonnes supprimées\",{{\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Ob.2\", \"YEAR\"}, {\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Ob.3\", \"SI_DST_04TH_20\"}})",
+                "in",
+                "    #\"Colonnes renommées\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "SI_DST_02ND_20",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "changedProperties": [
+          {
+            "property": "IsHidden"
+          }
+        ],
+        "columns": [
+          {
+            "name": "YEAR",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "a0df6015-3548-4180-9e71-fab25660e471",
+            "sourceColumn": "YEAR",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "SI_DST_04TH_20",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "639541a1-a048-4b78-a9a3-fd4de39cbd55",
+            "sourceColumn": "SI_DST_04TH_20",
+            "summarizeBy": "none"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "d49c07ec-f126-40a4-b0d3-98d8024a1cb6",
+        "partitions": [
+          {
+            "name": "SI_DST_02ND_20",
+            "mode": "import",
+            "queryGroup": "Series WB",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Xml.Tables(Web.Contents(\"http://api.worldbank.org/v2/sdmx/rest/data/WDI/A.SI_DST_02ND_20.FRA/\")),",
+                "    #\"Table développé\" = Table.ExpandTableColumn(Source, \"Table\", {\"http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic\"}, {\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic\"}),",
+                "    #\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic développé\" = Table.ExpandTableColumn(#\"Table développé\", \"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic\", {\"Series\"}, {\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series\"}),",
+                "    #\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series développé\" = Table.ExpandTableColumn(#\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic développé\", \"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series\", {\"SeriesKey\", \"Obs\"}, {\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Seri\", \"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Obs\"}),",
+                "    #\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Obs développé\" = Table.ExpandTableColumn(#\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series développé\", \"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Obs\", {\"ObsDimension\", \"ObsValue\"}, {\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Obs.\", \"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Ob.1\"}),",
+                "    #\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Obs. développé\" = Table.ExpandTableColumn(#\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Obs développé\", \"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Obs.\", {\"Attribute:value\"}, {\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Ob.2\"}),",
+                "    #\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Ob.1 développé\" = Table.ExpandTableColumn(#\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Obs. développé\", \"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Ob.1\", {\"Attribute:value\"}, {\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Ob.3\"}),",
+                "    #\"Lignes filtrées\" = Table.SelectRows(#\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Ob.1 développé\", each ([Name] = \"DataSet\")),",
+                "    #\"Colonnes supprimées\" = Table.RemoveColumns(#\"Lignes filtrées\",{\"Name\", \"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Seri\"}),",
+                "    #\"Colonnes renommées\" = Table.RenameColumns(#\"Colonnes supprimées\",{{\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Ob.2\", \"YEAR\"}, {\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Ob.3\", \"SI_DST_04TH_20\"}})",
+                "in",
+                "    #\"Colonnes renommées\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "SI_DST_FRST_20",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "changedProperties": [
+          {
+            "property": "IsHidden"
+          }
+        ],
+        "columns": [
+          {
+            "name": "YEAR",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "20f7e6d6-ac0a-4fa4-8d99-3a1f2e688381",
+            "sourceColumn": "YEAR",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "SI_DST_04TH_20",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "82ccb7f7-95a4-4bf9-8b93-8ebcc1e19eb0",
+            "sourceColumn": "SI_DST_04TH_20",
+            "summarizeBy": "none"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "f4602bdd-05dd-44f3-91b9-439d8864c9c4",
+        "partitions": [
+          {
+            "name": "SI_DST_FRST_20",
+            "mode": "import",
+            "queryGroup": "Series WB",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Xml.Tables(Web.Contents(\"http://api.worldbank.org/v2/sdmx/rest/data/WDI/A.SI_DST_FRST_20.FRA/\")),",
+                "    #\"Table développé\" = Table.ExpandTableColumn(Source, \"Table\", {\"http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic\"}, {\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic\"}),",
+                "    #\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic développé\" = Table.ExpandTableColumn(#\"Table développé\", \"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic\", {\"Series\"}, {\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series\"}),",
+                "    #\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series développé\" = Table.ExpandTableColumn(#\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic développé\", \"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series\", {\"SeriesKey\", \"Obs\"}, {\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Seri\", \"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Obs\"}),",
+                "    #\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Obs développé\" = Table.ExpandTableColumn(#\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series développé\", \"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Obs\", {\"ObsDimension\", \"ObsValue\"}, {\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Obs.\", \"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Ob.1\"}),",
+                "    #\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Obs. développé\" = Table.ExpandTableColumn(#\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Obs développé\", \"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Obs.\", {\"Attribute:value\"}, {\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Ob.2\"}),",
+                "    #\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Ob.1 développé\" = Table.ExpandTableColumn(#\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Obs. développé\", \"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Ob.1\", {\"Attribute:value\"}, {\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Ob.3\"}),",
+                "    #\"Lignes filtrées\" = Table.SelectRows(#\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Ob.1 développé\", each ([Name] = \"DataSet\")),",
+                "    #\"Colonnes supprimées\" = Table.RemoveColumns(#\"Lignes filtrées\",{\"Name\", \"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Seri\"}),",
+                "    #\"Colonnes renommées\" = Table.RenameColumns(#\"Colonnes supprimées\",{{\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Ob.2\", \"YEAR\"}, {\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Ob.3\", \"SI_DST_04TH_20\"}})",
+                "in",
+                "    #\"Colonnes renommées\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Income shares",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "YEAR",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "c6203cd6-6f81-4afa-bb6c-287e85a89d5e",
+            "sourceColumn": "YEAR",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "20% les plus élevés",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "f047a77d-75d9-4dfc-ac9d-78074acbcb91",
+            "sourceColumn": "20% les plus élevés",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "4e tranche de 20%",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "f9078cfc-6ce2-4637-a7b0-68e9c9c0ea51",
+            "sourceColumn": "4e tranche de 20%",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "3e tranche de 20%",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "5577198f-d601-4677-988e-839f60ef31ba",
+            "sourceColumn": "3e tranche de 20%",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "2e tranche de 20%",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "1d950b4a-b87e-4177-b6aa-480ddf09bf9c",
+            "sourceColumn": "2e tranche de 20%",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "20% aux revenus les plus bas",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "bbe480f8-09be-46b7-a01c-f206b49046c7",
+            "sourceColumn": "20% aux revenus les plus bas",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "c1d63297-7b4f-4fee-b317-74319ea51784",
+        "partitions": [
+          {
+            "name": "Income shares",
+            "mode": "import",
+            "queryGroup": "Series WB",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = SI_DST_05TH_20,",
+                "    #\"Requêtes fusionnées\" = Table.NestedJoin(Source, {\"YEAR\"}, SI_DST_04TH_20, {\"YEAR\"}, \"SI_DST_04TH_20\", JoinKind.LeftOuter),",
+                "    #\"SI_DST_04TH_20 développé\" = Table.ExpandTableColumn(#\"Requêtes fusionnées\", \"SI_DST_04TH_20\", {\"SI_DST_04TH_20\"}, {\"SI_DST_04TH_20.SI_DST_04TH_20\"}),",
+                "    #\"Requêtes fusionnées1\" = Table.NestedJoin(#\"SI_DST_04TH_20 développé\", {\"YEAR\"}, SI_DST_03RD_20, {\"YEAR\"}, \"SI_DST_03RD_20\", JoinKind.LeftOuter),",
+                "    #\"SI_DST_03RD_20 développé\" = Table.ExpandTableColumn(#\"Requêtes fusionnées1\", \"SI_DST_03RD_20\", {\"SI_DST_04TH_20\"}, {\"SI_DST_03RD_20.SI_DST_04TH_20\"}),",
+                "    #\"Requêtes fusionnées2\" = Table.NestedJoin(#\"SI_DST_03RD_20 développé\", {\"YEAR\"}, SI_DST_02ND_20, {\"YEAR\"}, \"SI_DST_02ND_20\", JoinKind.LeftOuter),",
+                "    #\"SI_DST_02ND_20 développé\" = Table.ExpandTableColumn(#\"Requêtes fusionnées2\", \"SI_DST_02ND_20\", {\"SI_DST_04TH_20\"}, {\"SI_DST_02ND_20.SI_DST_04TH_20\"}),",
+                "    #\"Requêtes fusionnées3\" = Table.NestedJoin(#\"SI_DST_02ND_20 développé\", {\"YEAR\"}, SI_DST_FRST_20, {\"YEAR\"}, \"SI_DST_FRST_20\", JoinKind.LeftOuter),",
+                "    #\"SI_DST_FRST_20 développé\" = Table.ExpandTableColumn(#\"Requêtes fusionnées3\", \"SI_DST_FRST_20\", {\"SI_DST_04TH_20\"}, {\"SI_DST_FRST_20.SI_DST_04TH_20\"}),",
+                "    #\"Colonnes renommées\" = Table.RenameColumns(#\"SI_DST_FRST_20 développé\",{{\"SI_DST_04TH_20.SI_DST_04TH_20\", \"SI_DST_04TH_20\"}, {\"SI_DST_03RD_20.SI_DST_04TH_20\", \"SI_DST_03RD_20\"}, {\"SI_DST_02ND_20.SI_DST_04TH_20\", \"SI_DST_02ND_20\"}, {\"SI_DST_FRST_20.SI_DST_04TH_20\", \"SI_DST_FRST_20\"}}),",
+                "    #\"Type modifié\" = Table.TransformColumnTypes(#\"Colonnes renommées\",{{\"YEAR\", type date}}),",
+                "    #\"Valeur remplacée\" = Table.ReplaceValue(#\"Type modifié\",\".\",\",\",Replacer.ReplaceText,{\"SI_DST_05TH_20\", \"SI_DST_04TH_20\", \"SI_DST_03RD_20\", \"SI_DST_02ND_20\", \"SI_DST_FRST_20\"}),",
+                "    #\"Type modifié1\" = Table.TransformColumnTypes(#\"Valeur remplacée\",{{\"SI_DST_05TH_20\", type number}, {\"SI_DST_04TH_20\", type number}, {\"SI_DST_03RD_20\", type number}, {\"SI_DST_02ND_20\", type number}, {\"SI_DST_FRST_20\", type number}}),",
+                "    #\"Colonnes renommées1\" = Table.RenameColumns(#\"Type modifié1\",{{\"SI_DST_FRST_20\", \"20% aux revenus les plus bas\"}, {\"SI_DST_02ND_20\", \"2e tranche de 20%\"}, {\"SI_DST_03RD_20\", \"3e tranche de 20%\"}, {\"SI_DST_04TH_20\", \"4e tranche de 20%\"}, {\"SI_DST_05TH_20\", \"20% les plus élevés\"}})",
+                "in",
+                "    #\"Colonnes renommées1\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "SI_POV_GINI",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "YEAR",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "7825caf6-1b90-44a6-a3a3-cd1dca2aae84",
+            "sourceColumn": "YEAR",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "GINI",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "ef3f3fe5-42ee-4243-ab71-7cb5a51e6aa3",
+            "sourceColumn": "GINI",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "b069d177-e367-4285-aee4-ca322674e7bf",
+        "partitions": [
+          {
+            "name": "SI_POV_GINI",
+            "mode": "import",
+            "queryGroup": "Series WB",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Xml.Tables(Web.Contents(\"http://api.worldbank.org/v2/sdmx/rest/data/WDI/A.SI_POV_GINI.FRA/\")),",
+                "    #\"Table développé\" = Table.ExpandTableColumn(Source, \"Table\", {\"http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic\"}, {\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic\"}),",
+                "    #\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic développé\" = Table.ExpandTableColumn(#\"Table développé\", \"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic\", {\"Series\"}, {\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series\"}),",
+                "    #\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series développé\" = Table.ExpandTableColumn(#\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic développé\", \"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series\", {\"SeriesKey\", \"Obs\"}, {\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Seri\", \"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Obs\"}),",
+                "    #\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Obs développé\" = Table.ExpandTableColumn(#\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series développé\", \"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Obs\", {\"ObsDimension\", \"ObsValue\"}, {\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Obs.\", \"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Ob.1\"}),",
+                "    #\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Obs. développé\" = Table.ExpandTableColumn(#\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Obs développé\", \"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Obs.\", {\"Attribute:value\"}, {\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Ob.2\"}),",
+                "    #\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Ob.1 développé\" = Table.ExpandTableColumn(#\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Obs. développé\", \"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Ob.1\", {\"Attribute:value\"}, {\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Ob.3\"}),",
+                "    #\"Lignes filtrées\" = Table.SelectRows(#\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Ob.1 développé\", each ([Name] = \"DataSet\")),",
+                "    #\"Colonnes supprimées\" = Table.RemoveColumns(#\"Lignes filtrées\",{\"Name\", \"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Seri\"}),",
+                "    #\"Colonnes renommées\" = Table.RenameColumns(#\"Colonnes supprimées\",{{\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Ob.2\", \"YEAR\"}, {\"Table.http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic.Series.Ob.3\", \"GINI\"}}),",
+                "    #\"Type modifié\" = Table.TransformColumnTypes(#\"Colonnes renommées\",{{\"YEAR\", type date}}),",
+                "    #\"Valeur remplacée\" = Table.ReplaceValue(#\"Type modifié\",\".\",\",\",Replacer.ReplaceText,{\"GINI\"}),",
+                "    #\"Type modifié1\" = Table.TransformColumnTypes(#\"Valeur remplacée\",{{\"GINI\", type number}})",
+                "in",
+                "    #\"Type modifié1\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
       }
     ]
   }

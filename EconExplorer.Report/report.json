@@ -1,5 +1,5 @@
 {
-  "config": "{\"version\":\"5.47\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY23SU08\",\"version\":\"5.47\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"slowDataSourceSettings\":{\"isCrossHighlightingDisabled\":false,\"isSlicerSelectionsButtonEnabled\":false,\"isFilterSelectionsButtonEnabled\":false,\"isFieldWellButtonEnabled\":false,\"isApplyAllButtonEnabled\":false},\"linguisticSchemaSyncVersion\":0,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}",
+  "config": "{\"version\":\"5.47\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY23SU08\",\"version\":\"5.47\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"slowDataSourceSettings\":{\"isCrossHighlightingDisabled\":false,\"isSlicerSelectionsButtonEnabled\":false,\"isFilterSelectionsButtonEnabled\":false,\"isFieldWellButtonEnabled\":false,\"isApplyAllButtonEnabled\":false},\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}",
   "layoutOptimization": 0,
   "resourcePackages": [
     {
@@ -27,22 +27,22 @@
       "name": "ReportSection",
       "visualContainers": [
         {
-          "config": "{\"name\":\"596f5cf2f992deae7010\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":3000,\"width\":264.35839028094153,\"height\":104.96583143507974,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Date.Date\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Date\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Date\"},\"Name\":\"Date.Date\",\"NativeReferenceName\":\"Date\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Date\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"data\":[{\"properties\":{\"startDate\":{\"expr\":{\"Literal\":{\"Value\":\"datetime'2014-12-24T00:00:00'\"}}},\"endDate\":{\"expr\":{\"Literal\":{\"Value\":\"datetime'2030-12-31T00:00:00'\"}}},\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Between'\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Date\",\"Type\":0}],\"Where\":[{\"Condition\":{\"And\":{\"Left\":{\"Comparison\":{\"ComparisonKind\":2,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Date\"}},\"Right\":{\"Literal\":{\"Value\":\"datetime'2014-12-24T00:00:00'\"}}}},\"Right\":{\"Comparison\":{\"ComparisonKind\":3,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Date\"}},\"Right\":{\"Literal\":{\"Value\":\"datetime'2031-01-01T00:00:00'\"}}}}}}}]}}}}]}}}",
+          "config": "{\"name\":\"596f5cf2f992deae7010\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":1000,\"width\":264.35839028094153,\"height\":104.96583143507974,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Date.Date\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Date\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Date\"},\"Name\":\"Date.Date\",\"NativeReferenceName\":\"Date\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Date\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"data\":[{\"properties\":{\"startDate\":{\"expr\":{\"Literal\":{\"Value\":\"datetime'2014-12-24T00:00:00'\"}}},\"endDate\":{\"expr\":{\"Literal\":{\"Value\":\"datetime'2030-12-31T00:00:00'\"}}},\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Between'\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Date\",\"Type\":0}],\"Where\":[{\"Condition\":{\"And\":{\"Left\":{\"Comparison\":{\"ComparisonKind\":2,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Date\"}},\"Right\":{\"Literal\":{\"Value\":\"datetime'2014-12-24T00:00:00'\"}}}},\"Right\":{\"Comparison\":{\"ComparisonKind\":3,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Date\"}},\"Right\":{\"Literal\":{\"Value\":\"datetime'2031-01-01T00:00:00'\"}}}}}}}]}}}}],\"header\":[{\"properties\":{\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
           "filters": "[]",
           "height": 104.97,
           "width": 264.36,
           "x": 0.00,
           "y": 0.00,
-          "z": 3000.00
+          "z": 1000.00
         },
         {
-          "config": "{\"name\":\"99e77c53ff4ed98bd006\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":468.45861807137436,\"z\":3003,\"width\":1280,\"height\":251.72361427486715,\"tabOrder\":3003}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(IPC-2015.Monthhly inflation %)\"}],\"Category\":[{\"queryRef\":\"Date.Date\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Date\",\"Type\":0},{\"Name\":\"i\",\"Entity\":\"IPC-2015\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Date\"},\"Name\":\"Date.Date\",\"NativeReferenceName\":\"Date\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"i\"}},\"Property\":\"Monthly inflation %\"}},\"Function\":1},\"Name\":\"Sum(IPC-2015.Monthhly inflation %)\",\"NativeReferenceName\":\"Moyenne de Monthhly inflation %\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Date\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"valueAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"labelOrientation\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"labelDensity\":{\"expr\":{\"Literal\":{\"Value\":\"89L\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Taux d''inflation mensuel'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "config": "{\"name\":\"99e77c53ff4ed98bd006\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":468.45861807137436,\"z\":4000,\"width\":1280,\"height\":251.72361427486715,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(IPC-2015.Monthhly inflation %)\"}],\"Category\":[{\"queryRef\":\"Date.Date\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Date\",\"Type\":0},{\"Name\":\"i\",\"Entity\":\"IPC-2015\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Date\"},\"Name\":\"Date.Date\",\"NativeReferenceName\":\"Date\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"i\"}},\"Property\":\"Monthly inflation %\"}},\"Function\":1},\"Name\":\"Sum(IPC-2015.Monthhly inflation %)\",\"NativeReferenceName\":\"Moyenne de Monthhly inflation %\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Date\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"valueAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"labelOrientation\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"labelDensity\":{\"expr\":{\"Literal\":{\"Value\":\"89L\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Taux d''inflation mensuel'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
           "filters": "[]",
           "height": 251.72,
           "width": 1280.00,
           "x": 0.00,
           "y": 468.46,
-          "z": 3003.00
+          "z": 4000.00
         },
         {
           "config": "{\"name\":\"a46e1bd0a3e2bbaba9c3\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":104.96583143507974,\"z\":0,\"width\":593.8344722854974,\"height\":356.6894457099469,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(IPC-2015.Value)\"}],\"Category\":[{\"queryRef\":\"Date.Date.Variation.Hiérarchie de dates.Année\",\"active\":true},{\"queryRef\":\"Date.Date.Variation.Hiérarchie de dates.Mois\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"i\",\"Entity\":\"IPC-2015\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"Date\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"i\"}},\"Property\":\"Index\"}},\"Function\":1},\"Name\":\"Sum(IPC-2015.Value)\",\"NativeReferenceName\":\"Moyenne de Index\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Name\":\"Variation\",\"Property\":\"Date\"}},\"Hierarchy\":\"Hiérarchie de dates\"}},\"Level\":\"Année\"},\"Name\":\"Date.Date.Variation.Hiérarchie de dates.Année\",\"NativeReferenceName\":\"Date Année\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Name\":\"Variation\",\"Property\":\"Date\"}},\"Hierarchy\":\"Hiérarchie de dates\"}},\"Level\":\"Mois\"},\"Name\":\"Date.Date.Variation.Hiérarchie de dates.Mois\",\"NativeReferenceName\":\"Date Mois\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"valueAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"categoryAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Indice des prix à la consommation'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
@@ -54,22 +54,236 @@
           "z": 0.00
         },
         {
-          "config": "{\"name\":\"b4045778e828026dd518\",\"layouts\":[{\"id\":0,\"position\":{\"x\":617.160212604404,\"y\":0,\"z\":3001,\"width\":662.8397873955961,\"height\":461.6552771450266,\"tabOrder\":3001}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Date.Date\",\"active\":true}],\"Y\":[{\"queryRef\":\"IPC-2015.Last Inflation Rate\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Date\",\"Type\":0},{\"Name\":\"i\",\"Entity\":\"IPC-2015\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Date\"},\"Name\":\"Date.Date\",\"NativeReferenceName\":\"Date\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"i\"}},\"Property\":\"Last Inflation Rate\"},\"Name\":\"IPC-2015.Last Inflation Rate\",\"NativeReferenceName\":\"Last Inflation Rate\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Date\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"labelOrientation\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"1L\"}}},\"labelDensity\":{\"expr\":{\"Literal\":{\"Value\":\"100L\"}}}}}],\"categoryAxis\":[{\"properties\":{\"axisType\":{\"expr\":{\"Literal\":{\"Value\":\"'Scalar'\"}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"valueAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Taux d''inflation en rythme annuel'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "config": "{\"name\":\"b4045778e828026dd518\",\"layouts\":[{\"id\":0,\"position\":{\"x\":617.160212604404,\"y\":0,\"z\":2000,\"width\":662.8397873955961,\"height\":461.6552771450266,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Date.Date\",\"active\":true}],\"Y\":[{\"queryRef\":\"IPC-2015.Last Inflation Rate\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Date\",\"Type\":0},{\"Name\":\"i\",\"Entity\":\"IPC-2015\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Date\"},\"Name\":\"Date.Date\",\"NativeReferenceName\":\"Date\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"i\"}},\"Property\":\"Last Inflation Rate\"},\"Name\":\"IPC-2015.Last Inflation Rate\",\"NativeReferenceName\":\"Last Inflation Rate\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Date\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"labelOrientation\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"1L\"}}},\"labelDensity\":{\"expr\":{\"Literal\":{\"Value\":\"100L\"}}}}}],\"categoryAxis\":[{\"properties\":{\"axisType\":{\"expr\":{\"Literal\":{\"Value\":\"'Scalar'\"}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"valueAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Taux d''inflation en rythme annuel'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
           "filters": "[]",
           "height": 461.66,
           "width": 662.84,
           "x": 617.16,
           "y": 0.00,
-          "z": 3001.00
+          "z": 2000.00
         },
         {
-          "config": "{\"name\":\"efae537ad6af4dc30fa9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":273.10554290053153,\"y\":0,\"z\":3002,\"width\":320.72892938496585,\"height\":104.96583143507974,\"tabOrder\":3002}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"CL_PRIX_CONSO.Level 3 name\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"CL_PRIX_CONSO\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Level 3 name\"},\"Name\":\"CL_PRIX_CONSO.Level 3 name\",\"NativeReferenceName\":\"Level 3 name\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"CL_PRIX_CONSO\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Level 3 name\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Ensemble hors tabac'\"}}]]}}}]}}}}],\"selection\":[{\"properties\":{\"strictSingleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"header\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Catégorie de produit'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Catego'\"}}}}}]}}}",
+          "config": "{\"name\":\"efae537ad6af4dc30fa9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":273.10554290053153,\"y\":0,\"z\":3000,\"width\":320.72892938496585,\"height\":104.96583143507974,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"CL_PRIX_CONSO.Level 3 name\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"CL_PRIX_CONSO\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Level 3 name\"},\"Name\":\"CL_PRIX_CONSO.Level 3 name\",\"NativeReferenceName\":\"Level 3 name\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"CL_PRIX_CONSO\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Level 3 name\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Ensemble hors tabac'\"}}]]}}}]}},\"selfFilterEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"selection\":[{\"properties\":{\"strictSingleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"header\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Catégorie de produit'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Catego'\"}}}}}]}}}",
           "filters": "[{\"name\":\"Filterd917888602d392dc71d2\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"CL_PRIX_CONSO\"}},\"Property\":\"Lang\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"CL_PRIX_CONSO\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Lang\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'fr'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{}}]",
           "height": 104.97,
           "width": 320.73,
           "x": 273.11,
           "y": 0.00,
-          "z": 3002.00
+          "z": 3000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Monétaire",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection4ee658b39fb458f25b81",
+      "ordinal": 4,
+      "visualContainers": [],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Commerce international",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection645596143ef7428d050a",
+      "ordinal": 6,
+      "visualContainers": [],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "PIB",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection68b4951e334a397078d3",
+      "ordinal": 3,
+      "visualContainers": [],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Immobilier",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection68f3d025c8f93474365b",
+      "ordinal": 7,
+      "visualContainers": [],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Dépense publique",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection6b284bb40e88a7597b46",
+      "ordinal": 5,
+      "visualContainers": [],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Emploi",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSectiona9b80e22cd6c8b31d672",
+      "ordinal": 2,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"097c00a4bdbcd1f6a1b9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":312.59849372384934,\"y\":0,\"z\":1000,\"width\":294.77489539748956,\"height\":122.02309623430962,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Date.Date\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Date\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Date\"},\"Name\":\"Date.Date\",\"NativeReferenceName\":\"Date\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Date\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"data\":[{\"properties\":{\"startDate\":{\"expr\":{\"Literal\":{\"Value\":\"datetime'1989-09-01T01:00:00'\"}}},\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Between'\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Date\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":2,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Date\"}},\"Right\":{\"Literal\":{\"Value\":\"datetime'1989-09-01T00:00:00'\"}}}}}]}}}}]}}}",
+          "filters": "[]",
+          "height": 122.02,
+          "width": 294.77,
+          "x": 312.60,
+          "y": 0.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"2b8f21389341e5bcc780\",\"layouts\":[{\"id\":0,\"position\":{\"x\":640.2784937238494,\"y\":0,\"z\":6000,\"width\":292.0328033472803,\"height\":76.77857740585775,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"CL_SEXE.NAME\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"CL_SEXE\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"NAME\"},\"Name\":\"CL_SEXE.NAME\",\"NativeReferenceName\":\"NAME\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"selection\":[{\"properties\":{\"strictSingleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"general\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"CL_SEXE\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"NAME\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Hommes'\"}}]]}}}]}}}}],\"header\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Sexe'\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filterd50c4c410788ba7fa595\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"CL_SEXE\"}},\"Property\":\"NAME\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"CL_SEXE\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"NAME\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Ensemble'\"}}],[{\"Literal\":{\"Value\":\"'Femmes'\"}}],[{\"Literal\":{\"Value\":\"'Hommes'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{},\"isHiddenInViewMode\":false}]",
+          "height": 76.78,
+          "width": 292.03,
+          "x": 640.28,
+          "y": 0.00,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"3f522427a403b4622a3a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":641.0706717721848,\"y\":377.63783040261717,\"z\":8000,\"width\":613.6614744042529,\"height\":319.77396929253877,\"tabOrder\":8000}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Date.Date.Variation.Hiérarchie de dates.Année\",\"active\":true},{\"queryRef\":\"Date.Date.Variation.Hiérarchie de dates.Trimestre\"}],\"Y\":[{\"queryRef\":\"Sum(EMPLOI-BIT-TRIM.taux temps partiel)\"},{\"queryRef\":\"Sum(EMPLOI-BIT-TRIM.Taux CDD ou intérim)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Date\",\"Type\":0},{\"Name\":\"e\",\"Entity\":\"EMPLOI-BIT-TRIM\",\"Type\":0}],\"Select\":[{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Name\":\"Variation\",\"Property\":\"Date\"}},\"Hierarchy\":\"Hiérarchie de dates\"}},\"Level\":\"Année\"},\"Name\":\"Date.Date.Variation.Hiérarchie de dates.Année\",\"NativeReferenceName\":\"Date Année\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Name\":\"Variation\",\"Property\":\"Date\"}},\"Hierarchy\":\"Hiérarchie de dates\"}},\"Level\":\"Trimestre\"},\"Name\":\"Date.Date.Variation.Hiérarchie de dates.Trimestre\",\"NativeReferenceName\":\"Date Trimestre\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Taux temps partiel\"}},\"Function\":4},\"Name\":\"Sum(EMPLOI-BIT-TRIM.taux temps partiel)\",\"NativeReferenceName\":\"Max de taux temps partiel\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Taux CDD ou intérim\"}},\"Function\":4},\"Name\":\"Sum(EMPLOI-BIT-TRIM.Taux CDD ou intérim)\",\"NativeReferenceName\":\"Max de Taux CDD ou intérim\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 319.77,
+          "width": 613.66,
+          "x": 641.07,
+          "y": 377.64,
+          "z": 8000.00
+        },
+        {
+          "config": "{\"name\":\"4a9f66f2607cfaf18314\",\"layouts\":[{\"id\":0,\"position\":{\"x\":947.1400423807576,\"y\":0,\"z\":7000,\"width\":306.0693706085728,\"height\":76.13665935536636,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"EMPLOI-BIT-TRIM.AGE\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"e\",\"Entity\":\"EMPLOI-BIT-TRIM\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"AGE\"},\"Name\":\"EMPLOI-BIT-TRIM.AGE\",\"NativeReferenceName\":\"AGE\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"selection\":[{\"properties\":{\"strictSingleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"e\",\"Entity\":\"EMPLOI-BIT-TRIM\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"AGE\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'15-64'\"}}]]}}}]}}}}]}}}",
+          "filters": "[{\"name\":\"Filterb8d801535693cf148608\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"EMPLOI-BIT-TRIM\"}},\"Property\":\"AGE\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"e\",\"Entity\":\"EMPLOI-BIT-TRIM\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"AGE\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'15-24'\"}}],[{\"Literal\":{\"Value\":\"'15-64'\"}}],[{\"Literal\":{\"Value\":\"'25-49'\"}}],[{\"Literal\":{\"Value\":\"'50-64'\"}}],[{\"Literal\":{\"Value\":\"'55-64'\"}}],[{\"Literal\":{\"Value\":\"'00-'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{},\"isHiddenInViewMode\":false}]",
+          "height": 76.14,
+          "width": 306.07,
+          "x": 947.14,
+          "y": 0.00,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"5bcb9776ee643105a57f\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":2000,\"width\":281.0644351464435,\"height\":64.43916317991632,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"CL_NAF2_RGP.NAME\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"CL_NAF2_RGP\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"NAME\"},\"Name\":\"CL_NAF2_RGP.NAME\",\"NativeReferenceName\":\"NAME\"}]},\"queryOptions\":{\"keepProjectionOrder\":true},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"selection\":[{\"properties\":{\"strictSingleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"general\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"CL_NAF2_RGP\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"NAME\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Ensemble des secteurs'\"}}]]}}}]}}}}],\"header\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Secteur'\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter903660e63b5f523239ed\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"CL_NAF2_RGP\"}},\"Property\":\"CountEmploiSecteur\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"CL_NAF2_RGP\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":1,\"Left\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"CountEmploiSecteur\"}},\"Right\":{\"Literal\":{\"Value\":\"0L\"}}}}}]},\"type\":\"Advanced\",\"howCreated\":1}]",
+          "height": 64.44,
+          "width": 281.06,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"5ff4916e1614988df900\",\"layouts\":[{\"id\":0,\"position\":{\"x\":476.23386484434326,\"y\":0,\"z\":8001,\"width\":300.31890660592256,\"height\":720.1822323462416,\"tabOrder\":8001}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'line'\"}}},\"linecapType\":{\"expr\":{\"Literal\":{\"Value\":\"'flat'\"}}}}}],\"rotation\":[{\"properties\":{\"shapeAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}},\"angle\":{\"expr\":{\"Literal\":{\"Value\":\"90L\"}}}}}],\"outline\":[{\"properties\":{\"weight\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"lineColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0.4}}}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 720.18,
+          "width": 300.32,
+          "x": 476.23,
+          "y": 0.00,
+          "z": 8001.00
+        },
+        {
+          "config": "{\"name\":\"c4cecbe6d74d088a9dcd\",\"layouts\":[{\"id\":0,\"position\":{\"x\":46.615564853556485,\"y\":514.1422594142259,\"z\":4000,\"width\":522.3685355648536,\"height\":205.65690376569037,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(TAUX-CHOMAGE.OBS_VALUE)\"}],\"Category\":[{\"queryRef\":\"Date.Date.Variation.Hiérarchie de dates.Année\",\"active\":true},{\"queryRef\":\"Date.Date.Variation.Hiérarchie de dates.Trimestre\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"TAUX-CHOMAGE\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"Date\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"OBS_VALUE\"}},\"Function\":4},\"Name\":\"Sum(TAUX-CHOMAGE.OBS_VALUE)\",\"NativeReferenceName\":\"Max de OBS_VALUE\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Name\":\"Variation\",\"Property\":\"Date\"}},\"Hierarchy\":\"Hiérarchie de dates\"}},\"Level\":\"Année\"},\"Name\":\"Date.Date.Variation.Hiérarchie de dates.Année\",\"NativeReferenceName\":\"Date Année\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Name\":\"Variation\",\"Property\":\"Date\"}},\"Hierarchy\":\"Hiérarchie de dates\"}},\"Level\":\"Trimestre\"},\"Name\":\"Date.Date.Variation.Hiérarchie de dates.Trimestre\",\"NativeReferenceName\":\"Date Trimestre\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"valueAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Taux de chômage'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 205.66,
+          "width": 522.37,
+          "x": 46.62,
+          "y": 514.14,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"d4fd685cbf71fca1e2e2\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":147.7296886864085,\"z\":0,\"width\":614.2444950645407,\"height\":366.408504176158,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"lineStackedColumnComboChart\",\"projections\":{\"Y2\":[{\"queryRef\":\"Sum(TCRED-EMPLOI-31-DECEMBRE-BASE-2018.VALUE)\"}],\"Y\":[{\"queryRef\":\"Sum(TCRED-EMPLOI-31-DECEMBRE-BASE-2018.Yearly change)\"}],\"Category\":[{\"queryRef\":\"Date.Date.Variation.Hiérarchie de dates.Année\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"TCRED-EMPLOI-31-DECEMBRE-BASE-2018\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"Date\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"VALUE\"}},\"Function\":4},\"Name\":\"Sum(TCRED-EMPLOI-31-DECEMBRE-BASE-2018.VALUE)\",\"NativeReferenceName\":\"Max de VALUE\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Yearly change\"}},\"Function\":4},\"Name\":\"Sum(TCRED-EMPLOI-31-DECEMBRE-BASE-2018.Yearly change)\",\"NativeReferenceName\":\"Max de Yearly change\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Name\":\"Variation\",\"Property\":\"Date\"}},\"Hierarchy\":\"Hiérarchie de dates\"}},\"Level\":\"Année\"},\"Name\":\"Date.Date.Variation.Hiérarchie de dates.Année\",\"NativeReferenceName\":\"Date Année\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Name\":\"Variation\",\"Property\":\"Date\"}},\"Hierarchy\":\"Hiérarchie de dates\"}},\"Level\":\"Année\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"valueAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"secShow\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"titleText\":{\"expr\":{\"Literal\":{\"Value\":\"'Variation annuelle'\"}}},\"secTitleText\":{\"expr\":{\"Literal\":{\"Value\":\"'Nombre d''emplois'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Nombre d''emplois'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 366.41,
+          "width": 614.24,
+          "x": 0.00,
+          "y": 147.73,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"e9963902415a69eda930\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":61.69707112970711,\"z\":3000,\"width\":230.33573221757322,\"height\":86.37589958158996,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"CL_ZONE_GEO.Name\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"CL_ZONE_GEO\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Name\"},\"Name\":\"CL_ZONE_GEO.Name\",\"NativeReferenceName\":\"Name\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"CL_ZONE_GEO\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Name\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'France métropolitaine'\"}}]]}}}]}},\"selfFilterEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"selfFilter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"CL_ZONE_GEO\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Contains\":{\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Name\"}},\"Right\":{\"Literal\":{\"Value\":\"'fra'\"}}}},\"Annotations\":{\"PowerBI.MParameterBehavior\":1}}]}}}}],\"selection\":[{\"properties\":{\"strictSingleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"header\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Zone géographique'\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter1b37eb387d745cb6215f\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"CL_ZONE_GEO\"}},\"Property\":\"CountEmploiRegion\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"CL_ZONE_GEO\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":1,\"Left\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"CountEmploiRegion\"}},\"Right\":{\"Literal\":{\"Value\":\"0L\"}}}}}]},\"type\":\"Advanced\",\"howCreated\":1}]",
+          "height": 86.38,
+          "width": 230.34,
+          "x": 0.00,
+          "y": 61.70,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"fdf1c0fa3da441583da7\",\"layouts\":[{\"id\":0,\"position\":{\"x\":641.0706717721848,\"y\":105.06858991040559,\"z\":5000,\"width\":613.6614744042529,\"height\":254.29644224692368,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Date.Date.Variation.Hiérarchie de dates.Année\",\"active\":true},{\"queryRef\":\"Date.Date.Variation.Hiérarchie de dates.Trimestre\"}],\"Y\":[{\"queryRef\":\"Sum(EMPLOI-BIT-TRIM.Taux d'activité)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Date\",\"Type\":0},{\"Name\":\"e\",\"Entity\":\"EMPLOI-BIT-TRIM\",\"Type\":0}],\"Select\":[{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Name\":\"Variation\",\"Property\":\"Date\"}},\"Hierarchy\":\"Hiérarchie de dates\"}},\"Level\":\"Année\"},\"Name\":\"Date.Date.Variation.Hiérarchie de dates.Année\",\"NativeReferenceName\":\"Date Année\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Name\":\"Variation\",\"Property\":\"Date\"}},\"Hierarchy\":\"Hiérarchie de dates\"}},\"Level\":\"Trimestre\"},\"Name\":\"Date.Date.Variation.Hiérarchie de dates.Trimestre\",\"NativeReferenceName\":\"Date Trimestre\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Taux d'activité\"}},\"Function\":4},\"Name\":\"Sum(EMPLOI-BIT-TRIM.Taux d'activité)\",\"NativeReferenceName\":\"Max de Taux d'activité\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"valueAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Taux d''activité'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 254.30,
+          "width": 613.66,
+          "x": 641.07,
+          "y": 105.07,
+          "z": 5000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Pouvoir d'achat",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSectionae858a7e8b3cce153446",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"13f2f15917ffadb95dbd\",\"layouts\":[{\"id\":0,\"position\":{\"x\":628,\"y\":107,\"width\":618,\"height\":363,\"z\":3000,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Date.Date.Variation.Hiérarchie de dates.Année\",\"active\":true}],\"Y\":[{\"queryRef\":\"Max(Income shares.20% aux revenus les plus bas)\"},{\"queryRef\":\"Max(Income shares.2e tranche de 20%)\"},{\"queryRef\":\"Max(Income shares.3e tranche de 20%)\"},{\"queryRef\":\"Max(Income shares.4e tranche de 20%)\"},{\"queryRef\":\"Max(Income shares.20% les plus élevés)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Date\",\"Type\":0},{\"Name\":\"i\",\"Entity\":\"Income shares\",\"Type\":0}],\"Select\":[{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Name\":\"Variation\",\"Property\":\"Date\"}},\"Hierarchy\":\"Hiérarchie de dates\"}},\"Level\":\"Année\"},\"Name\":\"Date.Date.Variation.Hiérarchie de dates.Année\",\"NativeReferenceName\":\"Date Année\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"i\"}},\"Property\":\"20% aux revenus les plus bas\"}},\"Function\":4},\"Name\":\"Max(Income shares.20% aux revenus les plus bas)\",\"NativeReferenceName\":\"20% aux revenus les plus bas1\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"i\"}},\"Property\":\"2e tranche de 20%\"}},\"Function\":4},\"Name\":\"Max(Income shares.2e tranche de 20%)\",\"NativeReferenceName\":\" 2e tranche de 20%\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"i\"}},\"Property\":\"3e tranche de 20%\"}},\"Function\":4},\"Name\":\"Max(Income shares.3e tranche de 20%)\",\"NativeReferenceName\":\"3e tranche de 20%1\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"i\"}},\"Property\":\"4e tranche de 20%\"}},\"Function\":4},\"Name\":\"Max(Income shares.4e tranche de 20%)\",\"NativeReferenceName\":\"4e tranche de 20%1\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"i\"}},\"Property\":\"20% les plus élevés\"}},\"Function\":4},\"Name\":\"Max(Income shares.20% les plus élevés)\",\"NativeReferenceName\":\"20% les plus élevés1\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Name\":\"Variation\",\"Property\":\"Date\"}},\"Hierarchy\":\"Hiérarchie de dates\"}},\"Level\":\"Année\"}}}]},\"columnProperties\":{\"Sum(Income shares.SI_DST_FRST_20)\":{\"displayName\":\"20% aux revenus les plus bas\"},\"Sum(Income shares.SI_DST_02ND_20)\":{\"displayName\":\"2e tranche de 20%\"},\"Sum(Income shares.SI_DST_03RD_20)\":{\"displayName\":\"3e tranche de 20%\"},\"Sum(Income shares.SI_DST_04TH_20)\":{\"displayName\":\"4e tranche de 20%\"},\"Sum(Income shares.SI_DST_05TH_20)\":{\"displayName\":\"20% les plus élevés\"},\"Max(Income shares.20% aux revenus les plus bas)\":{\"displayName\":\"20% aux revenus les plus bas\"},\"Max(Income shares.2e tranche de 20%)\":{\"displayName\":\" 2e tranche de 20%\"},\"Max(Income shares.3e tranche de 20%)\":{\"displayName\":\"3e tranche de 20%\"},\"Max(Income shares.4e tranche de 20%)\":{\"displayName\":\"4e tranche de 20%\"},\"Max(Income shares.20% les plus élevés)\":{\"displayName\":\"20% les plus élevés\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"legend\":[{\"properties\":{\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'BottomCenter'\"}}},\"showTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"8D\"}}}}}],\"categoryAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"valueAxis\":[{\"properties\":{\"titleText\":{\"expr\":{\"Literal\":{\"Value\":\"'Part du revenu total'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Part des revenus par tranche de 20% de la population'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 363.00,
+          "width": 618.00,
+          "x": 628.00,
+          "y": 107.00,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"44339b4a7214465b7172\",\"layouts\":[{\"id\":0,\"position\":{\"x\":628,\"y\":478,\"width\":618,\"height\":242,\"z\":3001,\"tabOrder\":3001}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Date.Date.Variation.Hiérarchie de dates.Année\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(SI_POV_GINI.GINI)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Date\",\"Type\":0},{\"Name\":\"s\",\"Entity\":\"SI_POV_GINI\",\"Type\":0}],\"Select\":[{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Name\":\"Variation\",\"Property\":\"Date\"}},\"Hierarchy\":\"Hiérarchie de dates\"}},\"Level\":\"Année\"},\"Name\":\"Date.Date.Variation.Hiérarchie de dates.Année\",\"NativeReferenceName\":\"Date Année\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"GINI\"}},\"Function\":4},\"Name\":\"Sum(SI_POV_GINI.GINI)\",\"NativeReferenceName\":\"Max de GINI\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Name\":\"Variation\",\"Property\":\"Date\"}},\"Hierarchy\":\"Hiérarchie de dates\"}},\"Level\":\"Année\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"valueAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Indice de GINI'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 242.00,
+          "width": 618.00,
+          "x": 628.00,
+          "y": 478.00,
+          "z": 3001.00
+        },
+        {
+          "config": "{\"name\":\"632083498281a76e5bb9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":106.90964312832195,\"z\":0,\"width\":618.1321184510251,\"height\":363.4927866362946,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(CNA-2014-RDB.Index EVOPAARPP)\"}],\"Category\":[{\"queryRef\":\"Date.Date.Variation.Hiérarchie de dates.Année\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"CNA-2014-RDB\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"Date\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Index EVOPAARPP\"}},\"Function\":4},\"Name\":\"Sum(CNA-2014-RDB.Index EVOPAARPP)\",\"NativeReferenceName\":\"Max de Index EVOPAARPP\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Name\":\"Variation\",\"Property\":\"Date\"}},\"Hierarchy\":\"Hiérarchie de dates\"}},\"Level\":\"Année\"},\"Name\":\"Date.Date.Variation.Hiérarchie de dates.Année\",\"NativeReferenceName\":\"Date Année\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Name\":\"Variation\",\"Property\":\"Date\"}},\"Hierarchy\":\"Hiérarchie de dates\"}},\"Level\":\"Année\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"valueAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Indice du pouvoir d''achat du revenu disponible arbitrable par personne'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 363.49,
+          "width": 618.13,
+          "x": 0.00,
+          "y": 106.91,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"a0c4a23672f6ef62c424\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":478.17767653758546,\"z\":2000,\"width\":618.1321184510251,\"height\":242.00455580865605,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(CNA-2014-RDB.CNA_EVOPAARPP)\"}],\"Category\":[{\"queryRef\":\"Date.Date.Variation.Hiérarchie de dates.Année\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"CNA-2014-RDB\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"Date\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"CNA_EVOPAARPP\"}},\"Function\":0},\"Name\":\"Sum(CNA-2014-RDB.CNA_EVOPAARPP)\",\"NativeReferenceName\":\"Somme de CNA_EVOPAARPP\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Name\":\"Variation\",\"Property\":\"Date\"}},\"Hierarchy\":\"Hiérarchie de dates\"}},\"Level\":\"Année\"},\"Name\":\"Date.Date.Variation.Hiérarchie de dates.Année\",\"NativeReferenceName\":\"Date Année\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Name\":\"Variation\",\"Property\":\"Date\"}},\"Hierarchy\":\"Hiérarchie de dates\"}},\"Level\":\"Année\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"labelOrientation\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"labelDensity\":{\"expr\":{\"Literal\":{\"Value\":\"100L\"}}}}}],\"categoryAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"valueAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Evolution du pouvoir d''achat du revenu disponible arbitrable par personne'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 242.00,
+          "width": 618.13,
+          "x": 0.00,
+          "y": 478.18,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"a6576dafcde053b8970d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":1000,\"width\":282.8246013667426,\"height\":106.90964312832195,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Date.Date\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Date\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Date\"},\"Name\":\"Date.Date\",\"NativeReferenceName\":\"Date\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Date\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"data\":[{\"properties\":{\"startDate\":{\"expr\":{\"Literal\":{\"Value\":\"datetime'1970-01-01T00:00:00'\"}}},\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Between'\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Date\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":2,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Date\"}},\"Right\":{\"Literal\":{\"Value\":\"datetime'1970-01-01T00:00:00'\"}}}}}]}}}}],\"header\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Date'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 106.91,
+          "width": 282.82,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 1000.00
         }
       ],
       "width": 1280.00

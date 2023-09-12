@@ -4,14 +4,14 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 0,
+        "x": 12.683998325150064,
         "y": 0
       },
       "nodes": [
         {
           "location": {
             "x": 0,
-            "y": 64
+            "y": 74.5
           },
           "nodeIndex": "CL_PRIX_CONSO",
           "nodeLineageTag": "e2b81847-05d9-43d4-8525-c6dc432c4731",
@@ -24,7 +24,7 @@
         {
           "location": {
             "x": 387,
-            "y": 0
+            "y": 10.5
           },
           "nodeIndex": "IPC-2015",
           "nodeLineageTag": "fdf74ccb-fb94-47f7-ab4c-f8faf1fe197c",
@@ -36,8 +36,8 @@
         },
         {
           "location": {
-            "x": 794,
-            "y": 48
+            "x": 802.73786121193768,
+            "y": 7.5
           },
           "nodeIndex": "Date",
           "nodeLineageTag": "ef99bbc1-9cdc-4d66-b9b8-7d0d59881ad0",
@@ -46,10 +46,205 @@
             "width": 234
           },
           "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 1190.7466517791117,
+            "y": 7.5
+          },
+          "nodeIndex": "CNA-2014-RDB",
+          "nodeLineageTag": "295199ec-6959-4862-9b43-4ae87a625a53",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 444.52412114747847,
+            "y": 544.035937472269
+          },
+          "nodeIndex": "TCRED-EMPLOI-31-DECEMBRE-BASE-2018",
+          "nodeLineageTag": "bb147dee-6bb4-4ecf-96e1-c1b7b5976d7e",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 36.541545853180651,
+            "y": 570.85460376674689
+          },
+          "nodeIndex": "CL_NAF2_RGP",
+          "nodeLineageTag": "d368c9c7-2177-47c4-b75f-8f2584621bc1",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 840.58547718433363,
+            "y": 566.62660432503026
+          },
+          "nodeIndex": "CL_ZONE_GEO",
+          "nodeLineageTag": "e6c0799c-7bc9-413b-a7c5-541babde4ecf",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1580.4466378220288,
+            "y": 100.52131695702279
+          },
+          "nodeIndex": "EMPLOI-BIT-TRIM",
+          "nodeLineageTag": "fa937483-5963-4b80-99e1-0c83a7cc0c6d",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1177.2558296358907,
+            "y": 557.85993300600262
+          },
+          "nodeIndex": "TAUX-CHOMAGE",
+          "nodeLineageTag": "b88864cd-0ca3-470f-b82a-3d073e27e1b5",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2078.6652762023409,
+            "y": 413.92395366248496
+          },
+          "nodeIndex": "CL_INDICATEUR",
+          "nodeLineageTag": "07404ced-d364-471a-ab47-ef5c9d442e7a",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1967.5587627814643,
+            "y": 196.88664898769511
+          },
+          "nodeIndex": "CL_SEXE",
+          "nodeLineageTag": "fc6620ab-17ee-42d2-a799-89e7e0f74657",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1570.6421307495655,
+            "y": 553.36526224525824
+          },
+          "nodeIndex": "Income shares",
+          "nodeLineageTag": "c1d63297-7b4f-4fee-b317-74319ea51784",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2829.9965949454845,
+            "y": 354.05899846706666
+          },
+          "nodeIndex": "SI_DST_02ND_20",
+          "nodeLineageTag": "d49c07ec-f126-40a4-b0d3-98d8024a1cb6",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2545.8241675694271,
+            "y": 47.297279216628283
+          },
+          "nodeIndex": "SI_DST_03RD_20",
+          "nodeLineageTag": "3d3238c7-d05e-48fd-98ec-4bad3151a58f",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2261.5587627814643,
+            "y": 217.0355948149134
+          },
+          "nodeIndex": "SI_DST_04TH_20",
+          "nodeLineageTag": "747a325b-96ce-4f1f-8039-1ac8d132fd90",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2545.7796170112997,
+            "y": 298.08041955334295
+          },
+          "nodeIndex": "SI_DST_05TH_20",
+          "nodeLineageTag": "f0484c1a-45ce-4935-a4d4-f8411d9ab621",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2559.365080515538,
+            "y": 532.23865825564076
+          },
+          "nodeIndex": "SI_DST_FRST_20",
+          "nodeLineageTag": "f4602bdd-05dd-44f3-91b9-439d8864c9c4",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1880.4777578246408,
+            "y": 565.83793244771925
+          },
+          "nodeIndex": "SI_POV_GINI",
+          "nodeLineageTag": "b069d177-e367-4285-aee4-ca322674e7bf",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "Toutes les tables",
-      "zoomValue": 100,
+      "zoomValue": 70.955543900968792,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,
